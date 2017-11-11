@@ -1,0 +1,85 @@
+#========================
+# Configurazione interfaccia
+#========================
+pushd interface
+
+reset all
+
+
+popd
+# Termine configurazione interfaccia
+
+#========================
+# Configurazione interfaccia
+#========================
+pushd interface ipv6
+
+uninstall
+
+
+popd
+# Termine configurazione interfaccia
+
+
+
+# ----------------------------------
+# Configurazione ISATAP
+# ----------------------------------
+pushd interface ipv6 isatap
+
+
+
+popd
+#Fine configurazione ISATAP
+
+
+
+# ----------------------------------
+# Configurazione 6to4
+# ----------------------------------
+pushd interface ipv6 6to4
+
+reset
+
+
+
+popd
+# Termine configurazione 6to4
+
+#=================================
+# Configurazione proxy delle porte
+#=================================
+pushd interface portproxy
+
+reset
+
+
+popd
+# Fine configurazione proxy delle porte
+
+
+
+# ---------------------------------- 
+# Configurazione IP interfaccia         
+# ---------------------------------- 
+pushd interface ip
+
+
+# Configurazione IP interfaccia per "Connessione rete senza fili"
+
+set address name="Connessione rete senza fili" source=dhcp 
+set dns name="Connessione rete senza fili" source=dhcp register=PRIMARY
+set wins name="Connessione rete senza fili" source=dhcp
+
+# Configurazione IP interfaccia per "Connessione Lan"
+
+set address name="Connessione Lan" source=static addr=192.168.0.66 mask=255.255.255.0
+set address name="Connessione Lan" gateway=192.168.0.254 gwmetric=0
+set dns name="Connessione Lan" source=static addr=193.70.152.25 register=PRIMARY
+set wins name="Connessione Lan" source=static addr=none
+
+
+popd
+# Termine della configurazione IP interfaccia
+
+

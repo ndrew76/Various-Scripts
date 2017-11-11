@@ -1,0 +1,1 @@
+netsh interface ip set address name="Connessione alla rete locale (LAN)" gateway=192.168.0.xxx gwmetric=1

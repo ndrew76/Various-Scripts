@@ -1,0 +1,108 @@
+#!/usr/local/bin/perl
+#============================================================= -*-perl-*-
+#
+# BackupPC_
+
+use strict;
+no  utf8;
+use lib "/usr/local/BackupPC3/lib";
+use BackupPC::Lib;
+use BackupPC::FileZIO;
+use BackupPC::Storage;
+use BackupPC::Xfer::Smb;
+use BackupPC::Xfer::Tar;
+use BackupPC::Xfer::Rsync;
+use BackupPC::Xfer::BackupPCd;
+use Encode;
+use Socket;
+use File::Path;
+use File::Find;
+use Getopt::Std;
+
+###########################################################################
+# Initialize
+###########################################################################
+
+die("BackupPC::Lib->new failed\n") if ( !(my $bpc = BackupPC::Lib->new) );
+my $TopDir = $bpc->TopDir();
+my $BinDir = $bpc->BinDir();
+my %Conf   = $bpc->Conf();
+my $NeedPostCmd;
+my $Hosts;
+my $SigName;
+my $Abort;
+
+$bpc->ChildInit();
+
+my %opts;
+if ( !getopts("defiv", \%opts) || @ARGV != 1 ) {
+    print("usage: $0 [-d] [-e] [-f] [-i] [-v] <client>\n");
+    exit(1);
+}
+if ( $ARGV[0] !~ /^([\w\.\s-]+)$/ ) {
+    print("$0: bad client name '$ARGV[0]'\n");
+    exit(1);
+}
+
+my $client = $1;   # BackupPC's client name (might not be real host name)
+my $hostIP;        # this is the IP address
+my $host;          # this is the real host name
+my($clientURI, $user);
+my $Dir     = "$TopDir/pc/$client";
+my @xferPid = ();
+my $tarPid  = -1;
+my($needLink, @Backups, $type);
+my($incrBaseTime, $incrBaseBkupNum, $incrBaseLevel, $incrLevel);
+my $lastFullTime = 0;
+my $lastIncrTime = 0;
+my $partialIdx = -1;
+my $partialNum;
+my $lastBkupNum;
+my $lastPartial = 0;
+my(@lastIdxByLevel, $incrCntSinceFull);
+
+#
+# Read Backup information, and find times of the most recent full and
+# incremental backups.  Also figure out which backup we will use
+# as a starting point for an incremental.
+#
+#    my $flds = {
+#        BackupFields => [qw(
+#                    num type startTime endTime
+#                    nFiles size nFilesExist sizeExist nFilesNew sizeNew
+#                    xferErrs xferBadFile xferBadShare tarErrs
+#                    compress sizeExistComp sizeNewComp
+#                    noFill fillFromNum mangle xferMethod level
+#                    charset
+#                )],
+#
+@Backups = $bpc->BackupInfoRead($client);
+## @Backups = sort( { $a->{startTime} <=> $b->{startTime} }, @Backups);
+my $maxbackups;
+for ( my $i = 0 ; $i < @Backups ; $i++ ) {
+    $needLink = 1 if ( $Backups[$i]{nFilesNew} eq ""
+                        || -f "$Dir/NewFileList.$Backups[$i]{num}" );
+    if ( $Backups[$i]{type} eq "full" ) {
+        $incrCntSinceFull = 0;
+        $lastBkupNum = $Backups[$i]{num};
+        $lastIdxByLevel[0] = $i;
+        if ( $lastFullTime < $Backups[$i]{startTime} ) {
+            $lastFullTime = $Backups[$i]{startTime};
+        }
+    } elsif ( $Backups[$i]{type} eq "incr" ) {
+        $incrCntSinceFull++;
+        $lastBkupNum = $Backups[$i]{num};
+        $lastIdxByLevel[$Backups[$i]{level}] = $i;
+        $lastIncrTime = $Backups[$i]{startTime}
+                if ( $lastIncrTime < $Backups[$i]{startTime} );
+    } elsif ( $Backups[$i]{type} eq "partial" ) {
+        $partialIdx  = $i;
+        $lastPartial = $Backups[$i]{startTime};
+        $partialNum  = $Backups[$i]{num};
+    }
+    $maxbackups = $i;
+}
+print 
+"$Backups[$maxbackups]{xferErrs}-$Backups[$maxbackups]{xferBadFile}-$TopDir-$lastBkupNum\n";
+
+exit(0);

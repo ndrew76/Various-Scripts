@@ -1,0 +1,1 @@
+plink.exe -l root -pw <passworddiroot> <ipdell'esxi> /vmfs/volumes/<volumedovehomessogliscript>/<directorydegliscript>/vmshutdown.sh &

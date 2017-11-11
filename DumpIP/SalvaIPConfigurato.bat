@@ -1,0 +1,1 @@
+netsh -c interface dump>ip%computername%.txt

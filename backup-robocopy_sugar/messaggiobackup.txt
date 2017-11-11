@@ -1,0 +1,2 @@
+Backup SugarCRM
+Guarda il Log per capire cosa succede!!!

@@ -1,0 +1,1 @@
+psshutdown -u andrea -p password -s -f -v "Spegnimento automatico in corso premere cancel per annullare" -c \\192.168.0.53 

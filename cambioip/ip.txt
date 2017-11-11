@@ -1,0 +1,81 @@
+#========================
+# Configurazione interfaccia
+#========================
+pushd interface
+
+reset all
+
+
+popd
+# Termine configurazione interfaccia
+
+#========================
+# Configurazione interfaccia
+#========================
+pushd interface ipv6
+
+uninstall
+
+
+popd
+# Termine configurazione interfaccia
+
+
+
+# ----------------------------------
+# Configurazione ISATAP
+# ----------------------------------
+pushd interface ipv6 isatap
+
+
+
+popd
+#Fine configurazione ISATAP
+
+
+
+# ----------------------------------
+# Configurazione 6to4
+# ----------------------------------
+pushd interface ipv6 6to4
+
+reset
+
+
+
+popd
+# Termine configurazione 6to4
+
+#=================================
+# Configurazione proxy delle porte
+#=================================
+pushd interface portproxy
+
+reset
+
+
+popd
+# Fine configurazione proxy delle porte
+
+
+
+# ---------------------------------- 
+# Configurazione IP interfaccia         
+# ---------------------------------- 
+pushd interface ip
+
+
+# Configurazione IP interfaccia per "Connessione alla rete locale (LAN)"
+
+set address name="Connessione alla rete locale (LAN)" source=static addr=192.168.0.20 mask=255.255.255.0
+set address name="Connessione alla rete locale (LAN)" gateway=192.168.0.1 gwmetric=1
+set dns name="Connessione alla rete locale (LAN)" source=static addr=192.168.0.99 register=PRIMARY
+add dns name="Connessione alla rete locale (LAN)" addr=213.140.2.12 index=2
+add dns name="Connessione alla rete locale (LAN)" addr=213.140.2.21 index=3
+set wins name="Connessione alla rete locale (LAN)" source=static addr=none
+
+
+popd
+# Termine della configurazione IP interfaccia
+
+

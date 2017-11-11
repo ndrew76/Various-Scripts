@@ -1,0 +1,44 @@
+###
+# FILE: hpacucli-check.sh (2010-11-05)
+# LICENCIA: GNU/GPL v3.0
+# USAGE: Check the status of the logical drives on a HP Server
+#        with hpacu (HP Array Configuration Utility Client)
+#        installed, syslog and send an email with errors.
+# AUTHOR: Olaf Reitmaier Veracierta <olafrv@gmail.com> / www.olafrv.com
+##
+
+MAIL=admin@enerplan.locale
+HPACUCLI=`which hpacucli`
+HPACUCLI_TMP=/tmp/hpacucli.log
+
+hpacucli ctrl all show | grep "Slot " | while read line1
+do
+   slot=`expr match "$line1" '.*Slot \([0-9]\).*'`
+#  echo "Searching controller in slot #$slot..."
+   hpacucli ctrl slot=$slot array all show | grep array | while read line2
+   do
+      array=`expr match "$line2" '.*array \([a-Z]\).*'`
+#     echo "Searching array $array..."
+      hpacucli ctrl slot=$slot array $array logicaldrive all show | grep logicaldrive | while read line3
+      do
+         logicaldrive=`expr match "$line3" '.*logicaldrive \([0-9]\).*'`
+#        echo "Searching logical drive #$logicaldrive..."
+         if [ `hpacucli ctrl slot=$slot array $array logicaldrive $logicaldrive show | grep "Status: OK$" | wc -l` -lt 2 ]
+                 then
+            msg="RAID Controller OK Slot #$slot Array $array Logical Drive #$logicaldrive"
+#           echo $msg
+            logger -p syslog.error -t RAID "$msg"
+            $HPACUCLI ctrl slot=$slot show config detail > $HPACUCLI_TMP
+            mail -s "$HOSTNAME [OK] - $msg" "$MAIL" < $HPACUCLI_TMP
+            rm -f $HPACUCLI_TMP
+         else
+            msg="RAID Controller Error Slot #$slot Array $array Logical Drive #$logicaldrive"
+#           echo $msg
+            logger -p syslog.error -t RAID "$msg"
+            $HPACUCLI ctrl slot=$slot show config detail > $HPACUCLI_TMP
+            mail -s "$HOSTNAME [ERROR] - $msg" "$MAIL" < $HPACUCLI_TMP
+            rm -f $HPACUCLI_TMP
+         fi
+      done
+   done
+done

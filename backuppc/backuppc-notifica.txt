@@ -1,0 +1,1 @@
+DumpPostUserCmd /admin/NotifyBackup $user $xferOK $host $type $client $hostIP 

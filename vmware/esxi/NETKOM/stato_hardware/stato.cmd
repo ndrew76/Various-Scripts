@@ -1,0 +1,2 @@
+perl esx-health.pl --server 10.18.254.100 --username root --password CCmm10.l --mailhost smtp.acantho.net --maildomain asac.mo.it --mailfrom esx1@asac.mo.it --mailto tecnici@netkom.net
+perl esx-health.pl --server 10.18.254.101 --username root --password CCmm10.l --mailhost smtp.acantho.net --maildomain asac.mo.it --mailfrom esx2@asac.mo.it --mailto tecnici@netkom.net

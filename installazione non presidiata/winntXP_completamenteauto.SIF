@@ -1,0 +1,35 @@
+;SetupMgrTag
+[Data]
+    AutoPartition=1
+    MsDosInitiated="0"
+    UnattendedInstall="Yes"
+
+[Unattended]
+    UnattendMode=FullUnattended
+    OemSkipEula=Yes
+    OemPreinstall=No
+    TargetPath=\WINDOWS
+
+[GuiUnattended]
+    AdminPassword=*
+    EncryptedAdminPassword=NO
+    OEMSkipRegional=1
+    TimeZone=85
+    OemSkipWelcome=1
+
+[UserData]
+    ProductID=VX4XG-8FFCQ-W6Q28-B3VDG-CTX9C
+    FullName="yuppies services"
+    OrgName="yuppies services"
+    ComputerName=PC
+
+[TapiLocation]
+    CountryCode=39
+    AreaCode=059
+
+[Identification]
+    JoinWorkgroup=WORKGROUP
+
+[Networking]
+    InstallDefaultComponents=Yes
+

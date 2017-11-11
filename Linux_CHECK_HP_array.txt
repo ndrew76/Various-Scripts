@@ -1,0 +1,22 @@
+#!/bin/bash
+###
+#If something went wrong with the compac smartarray disks this script will send an error email
+###
+# Questa stringa hpacucli controller slot=2 va corretta in base al controller
+MAIL=ndrew76@gmail.com 
+HPACUCLI=`which hpacucli`
+HPACUCLI_TMP=/tmp/hpacucli.log
+
+
+  if [ `hpacucli controller slot=2 physicaldrive all show | grep -E 'Failed|Rebuilding'| wc -l` -gt 0 ]
+  then
+   msg="RAID Controller Errors"
+   echo $msg
+   #$msg2=`hpacucli controller slot=1 physicaldrive all show`
+   logger -p syslog.error -t RAID "$msg"
+   $HPACUCLI controller slot=2 physicaldrive all show > $HPACUCLI_TMP
+   mail -s "$HOSTNAME [ERROR] - $msg" "$MAIL" < $HPACUCLI_TMP
+   #rm -f $HPACUCLI_TMP
+  else
+  echo "Everything Good"
+   fi

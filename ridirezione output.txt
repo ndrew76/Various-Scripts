@@ -1,0 +1,26 @@
+1) comando > output.txt
+crea il file output.txt (se non esiste) oppure PIALLA (i.e. sovrascrive) il file output.txt se esistente, e vi salva l'output del comando. Gli errori rimangono sullo standard error (il video)
+
+2) comando >> output.txt
+crea il file output.txt (se non esiste) oppure ACCODA (i.e. non cancella bensi' aggiunge) al file output.txt l'output del comando. Gli errori rimangono sullo standard error (il video)
+
+3) comando 2> error.txt
+crea il file error.txt (se non esiste) oppure PIALLA (i.e. sovrascrive) il file error.txt se esistente, e vi salva l'output generato dagli errori che il comando incontra. L'output standard viene invece stampato a video.
+
+4) comando 2>> error.txt
+crea il file error.txt (se non esiste) oppure ACCODA (i.e. non cancella bensi' aggiunge) al file error.txt l'output generato dagli errori che il comando incontra.L'output standard viene invece stampato a video.
+
+
+5) comando > file.txt 2> error.txt
+Combinazione di 1 e 3...
+Crea il file output.txt (se non esiste) oppure PIALLA (i.e. sovrascrive) il file output.txt se esistente, e vi salva l'output del comando.
+Crea anche il file error.txt (se non esiste) oppure PIALLA (i.e. sovrascrive) il file error.txt se esistente, e vi salva l'output generato dagli errori che il comando incontra.
+Questa combinazione consente di catturare sia l'output che gli errori generati da un comando.
+
+Consiglio pratico: nel tuo caso userei la seguente combinazione:
+
+echo -----------------nuova esecuzione ---------------->>output.txt
+date /t>>output.txt
+echo -----------------nuova esecuzione ---------------->>error.txt
+date /t>>error.txt
+comando.exe >>output.txt 2>>error.txt

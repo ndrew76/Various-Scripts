@@ -1,0 +1,3 @@
+select vdisk file="\\server\andrea\sistema.vhd"
+ATTACH VDISK
+exit

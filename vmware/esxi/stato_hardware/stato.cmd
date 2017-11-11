@@ -1,0 +1,1 @@
+perl esx-health.pl --server 192.168.100.100 --username root --password password --mailhost out.alice.it --maildomain nodominio.lan --mailfrom esx1@nodominio.lan --mailto ndrew76@gmail.com

@@ -1,0 +1,32 @@
+2013-03-02 10:00:00 : Starting ESXi Configuration Backup version 1.0
++++ ESXi to backup : 10.18.254.100,10.18.254.101
++++ Backup folder : C:\BackuP_CONFIG_ESXi\
++++ Backups size : 204.23 kB
++++ Retention : 4-weeks
++++ Path to vSphere CLI : C:\Programmi\VMware\VMware vSphere CLI\bin\
+2013-03-02 10:00:00 : Retention is set to 4-weeks so retention date is 2013/02/02
+2013-03-02 10:00:00 : Deleting expired backups
+2013-03-02 10:00:00 : 
+Backup 2013-01-26.zip has been deleted (-7 day older than retention)
+2013-03-02 10:00:00 : 
+Backup 2013-02-02.zip is OK (0 older than retention)
+2013-03-02 10:00:00 : 
+Backup 2013-02-09.zip is OK (7 older than retention)
+2013-03-02 10:00:00 : 
+Backup 2013-02-16.zip is OK (14 older than retention)
+2013-03-02 10:00:00 : 
+Backup 2013-02-23.zip is OK (21 older than retention)
+2013-03-02 10:00:00 : Executing command cmd /c tools\get-esx-fullversion.pl --server 10.18.254.100 --username root --password CCmm10.l
+2013-03-02 10:00:08 :  ==> Result (exit code 0): VMware ESXi 4.1.0 build-5027672013-03-02 10:00:08 : Server '10.18.254.100' is running VMware ESXi 4.1.0 build-5027672013-03-02 10:00:08 : Executing command cmd /c vicfg-cfgbackup.pl --server 10.18.254.100 --username root --password CCmm10.l --save "C:\NETKOM\Configuration_Backup\temp\2013-03-02\10.18.254.100.tar.gz"
+2013-03-02 10:00:12 :  ==> Result (exit code 0): Saving firmware configuration to C:\NETKOM\Configuration_Backup\temp\2013-03-02\10.18.254.100.tar.gz ...2013-03-02 10:00:12 : Backing up ESXi 10.18.254.100 : Success (Saving firmware configuration to C:\NETKOM\Configuration_Backup\temp\2013-03-02\10.18.254.100.tar.gz ...)
+2013-03-02 10:00:12 : Executing command cmd /c tools\get-esx-fullversion.pl --server 10.18.254.101 --username root --password CCmm10.l
+2013-03-02 10:00:16 :  ==> Result (exit code 0): VMware ESXi 4.1.0 build-5027672013-03-02 10:00:16 : Server '10.18.254.101' is running VMware ESXi 4.1.0 build-5027672013-03-02 10:00:16 : Executing command cmd /c vicfg-cfgbackup.pl --server 10.18.254.101 --username root --password CCmm10.l --save "C:\NETKOM\Configuration_Backup\temp\2013-03-02\10.18.254.101.tar.gz"
+2013-03-02 10:00:19 :  ==> Result (exit code 0): Saving firmware configuration to C:\NETKOM\Configuration_Backup\temp\2013-03-02\10.18.254.101.tar.gz ...2013-03-02 10:00:19 : Backing up ESXi 10.18.254.101 : Success (Saving firmware configuration to C:\NETKOM\Configuration_Backup\temp\2013-03-02\10.18.254.101.tar.gz ...)
+2013-03-02 10:00:19 : Executing command "C:\NETKOM\Configuration_Backup\tools\7z.exe" a "C:\BackuP_CONFIG_ESXi\2013-03-02.zip" -tZIP "C:\NETKOM\Configuration_Backup\temp\2013-03-02\*"
+2013-03-02 10:00:20 :  ==> Result (exit code 0): 7-Zip 9.20  Copyright (c) 1999-2010 Igor Pavlov  2010-11-18
+Scanning
+Creating archive C:\BackuP_CONFIG_ESXi\2013-03-02.zip
+Compressing  10.18.254.100.tar.gz
+Compressing  10.18.254.101.tar.gz
+Compressing  ESXi Versions.txt
+Everything is Ok2013-03-02 10:00:20 : Creating backup archive : Success

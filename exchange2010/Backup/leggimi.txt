@@ -1,0 +1,4 @@
+- creare disco vhd
+- importare file xml per la pianificazione windows Backup
+- modificare la pianificazione del backup
+- modificare file bat a seconda dei vari percorsi 

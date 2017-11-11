@@ -1,0 +1,116 @@
+{\rtf1\ansi\deff0\adeflang1025
+{\fonttbl{\f0\froman\fprq2\fcharset0 Times New Roman;}{\f1\froman\fprq2\fcharset2 Symbol;}{\f2\fswiss\fprq2\fcharset0 Arial;}{\f3\froman\fprq2\fcharset1 Times New Roman;}{\f4\froman\fprq2\fcharset1 ArialMT;}{\f5\froman\fprq0\fcharset1 ArialMT;}{\f6\froman\fprq2\fcharset1 Helvetica{\*\falt Arial};}{\f7\froman\fprq0\fcharset1 Helvetica{\*\falt Arial};}{\f8\fnil\fprq0\fcharset0 Arial{\*\falt Helvetica};}{\f9\fnil\fprq2\fcharset0 Microsoft YaHei;}{\f10\fnil\fprq2\fcharset0 Mangal;}{\f11\fnil\fprq0\fcharset1 Mangal;}}
+{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green0\blue128;\red51\green51\blue51;\red0\green0\blue255;\red128\green128\blue128;}
+{\stylesheet{\s0\snext0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af12\langfe2052\dbch\af10\afs24\alang1081\loch\f0\fs24\lang1040 Stile predefinito;}
+{\*\cs15\snext15\cf3\ul\ulc0\langfe255\alang255\lang255 Collegamento Internet;}
+{\s16\sbasedon0\snext17\sb240\sa120\keepn\dbch\af9\dbch\af10\afs28\loch\f2\fs28 Intestazione;}
+{\s17\sbasedon0\snext17\sb0\sa120 Corpo del testo;}
+{\s18\sbasedon17\snext18\sb0\sa120\dbch\af11 Elenco;}
+{\s19\sbasedon0\snext19\sb120\sa120\noline\i\dbch\af11\afs24\ai\fs24 Didascalia;}
+{\s20\sbasedon0\snext20\noline\dbch\af11 Indice;}
+}{\info{\author andrea}{\creatim\yr0\mo0\dy0\hr0\min0}{\revtim\yr0\mo0\dy0\hr0\min0}{\printim\yr0\mo0\dy0\hr0\min0}{\comment LibreOffice}{\vern4000}}\deftab708
+\viewscale100
+{\*\pgdsctbl
+{\pgdsc0\pgdscuse451\pgwsxn11906\pghsxn16838\marglsxn1134\margrsxn1134\margtsxn1417\margbsxn1134\pgdscnxt0 Stile predefinito;}}
+\formshade{\*\pgdscno0}\paperh16838\paperw11906\margl1134\margr1134\margt1417\margb1134\sectd\sbknone\sectunlocked1\pgndec\pgwsxn11906\pghsxn16838\marglsxn1134\margrsxn1134\margtsxn1417\margbsxn1134\ftnbj\ftnstart1\ftnrstcont\ftnnar\aenddoc\aftnrstcont\aftnstart1\aftnnrlc
+\pgndec\pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af12\langfe2052\dbch\af10\afs24\alang1081\loch\f0\fs24\lang1040\li0\ri-6\lin0\rin-6\fi0{\cf1\b\rtlch \ltrch\loch\fs44\loch\f5
+BACKUP-ESXi}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af12\langfe2052\dbch\af10\afs24\alang1081\loch\f0\fs24\lang1040\li0\ri-6\lin0\rin-6\fi0\cf1\b0\rtlch \ltrch\loch\fs18\loch\f5
+
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af12\langfe2052\dbch\af10\afs24\alang1081\loch\f0\fs24\lang1040\li0\ri-6\lin0\rin-6\fi0{\cf1\b0\rtlch \ltrch\loch\fs18\loch\f5
+Creare una directory nello storage di backup che conterra\u8217\'19 lo script, le configurazioni e il file di log di ghettoVCB.}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af12\langfe2052\dbch\af10\afs24\alang1081\loch\f0\fs24\lang1040\li0\ri-6\lin0\rin-6\fi0{\cf1\b0\rtlch \ltrch\loch\fs18\loch\f5
+Per il log creare una sottodirectory.}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af12\langfe2052\dbch\af10\afs24\alang1081\loch\f0\fs24\lang1040\li0\ri-6\lin0\rin-6\fi0\cf1\b0\rtlch \ltrch\loch\fs18\loch\f5
+
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af12\langfe2052\dbch\af10\afs24\alang1081\loch\f0\fs24\lang1040\li0\ri-6\lin0\rin-6\fi0{\cf1\b0\rtlch \ltrch\loch\fs18\loch\f5
+Gli storage si trovano: }{\cf1\b\rtlch \ltrch\loch\fs18\loch\f5
+/vmfs/volumes/NOME-DEL-VOLUME}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af12\langfe2052\dbch\af10\afs24\alang1081\loch\f0\fs24\lang1040\li0\ri-6\lin0\rin-6\fi0\cf1\b0\rtlch \ltrch\loch\fs18\loch\f5
+
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af12\langfe2052\dbch\af10\afs24\alang1081\loch\f0\fs24\lang1040\li0\ri-6\lin0\rin-6\fi0{\cf1\b0\rtlch \ltrch\loch\fs18\loch\f5
+Fare l\u8217\'19upload di ghettoVCB  nella directory appena creata.}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af12\langfe2052\dbch\af10\afs24\alang1081\loch\f0\fs24\lang1040\li0\ri-6\lin0\rin-6\fi0\cf1\b0\rtlch \ltrch\loch\fs18\loch\f5
+
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af12\langfe2052\dbch\af10\afs24\alang1081\loch\f0\fs24\lang1040\li0\ri-6\lin0\rin-6\fi0{\cf1\b0\rtlch \ltrch\loch\fs18\loch\f5
+Creare un file con l\u8217\'19elenco delle virtualmachine da salvare, un nome ogni riga (sono CASE SENSITIVE)}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af12\langfe2052\dbch\af10\afs24\alang1081\loch\f0\fs24\lang1040\li0\ri-6\lin0\rin-6\fi0\cf1\b0\rtlch \ltrch\loch\fs18\loch\f5
+
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af12\langfe2052\dbch\af10\afs24\alang1081\loch\f0\fs24\lang1040\li0\ri-6\lin0\rin-6\fi0{\cf1\b0\rtlch \ltrch\loch\fs18\loch\f5
+Esempio: vi }{\cf1\b\rtlch \ltrch\loch\fs18\loch\f5
+macchine}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af12\langfe2052\dbch\af10\afs24\alang1081\loch\f0\fs24\lang1040\li0\ri-6\lin0\rin-6\fi0\cf1\b0\rtlch \ltrch\loch\fs18\loch\f5
+
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af12\langfe2052\dbch\af10\afs24\alang1081\loch\f0\fs24\lang1040\li0\ri-6\lin0\rin-6\fi0{\cf1\b0\rtlch \ltrch\loch\fs18\loch\f5
+Editare il file: }{\cf1\b\rtlch \ltrch\loch\fs18\loch\f5
+ghettoVCB.conf}{\cf1\b0\rtlch \ltrch\loch\fs18\loch\f5
+ modificando i parametri di cui ho bisogno}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af12\langfe2052\dbch\af10\afs24\alang1081\loch\f0\fs24\lang1040\li0\ri-6\lin0\rin-6\fi0\cf1\b0\rtlch \ltrch\loch\fs18\loch\f5
+
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af12\langfe2052\dbch\af10\afs24\alang1081\loch\f0\fs24\lang1040\li0\ri-6\lin0\rin-6\fi0{\cf1\b0\rtlch \ltrch\loch\fs18\loch\f5
+Un esempio:}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af12\langfe2052\dbch\af10\afs24\alang1081\loch\f0\fs24\lang1040\li0\ri-6\lin0\rin-6\fi0\cf1\b0\rtlch \ltrch\loch\fs18\loch\f5
+
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af12\langfe2052\dbch\af10\afs24\alang1081\loch\f0\fs24\lang1040\li0\ri-6\lin0\rin-6\fi0{\cf1\i\b0\rtlch \ltrch\loch\fs18\loch\f5
+VM_BACKUP_VOLUME=}{\cf1\i\b\rtlch \ltrch\loch\fs18\loch\f5
+/vmfs/volumes/VM-BACKUP/BACKUP\tab \tab (directory di destinazione dei backup)}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af12\langfe2052\dbch\af10\afs24\alang1081\loch\f0\fs24\lang1040\li0\ri-6\lin0\rin-6\fi0{\cf1\i\b0\rtlch \ltrch\loch\fs18\loch\f5
+DISK_BACKUP_FORMAT=thin}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af12\langfe2052\dbch\af10\afs24\alang1081\loch\f0\fs24\lang1040\li0\ri-6\lin0\rin-6\fi0{\cf1\i\b0\rtlch \ltrch\loch\fs18\loch\f5
+VM_BACKUP_ROTATION_COUNT=}{\cf1\i\b\rtlch \ltrch\loch\fs18\loch\f5
+2}{\cf1\i\b0\rtlch \ltrch\loch\fs18\loch\f5
+\tab \tab \tab \tab \tab }{\cf1\i\b\rtlch \ltrch\loch\fs18\loch\f5
+(quanti backup tenere)}{\cf1\i\b0\rtlch \ltrch\loch\fs18\loch\f5
+ }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af12\langfe2052\dbch\af10\afs24\alang1081\loch\f0\fs24\lang1040\li0\ri-6\lin0\rin-6\fi0{\cf1\i\b0\rtlch \ltrch\loch\fs18\loch\f5
+POWER_VM_DOWN_BEFORE_BACKUP=0}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af12\langfe2052\dbch\af10\afs24\alang1081\loch\f0\fs24\lang1040\li0\ri-6\lin0\rin-6\fi0{\cf1\i\b0\rtlch \ltrch\loch\fs18\loch\f5
+ENABLE_HARD_POWER_OFF=0}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af12\langfe2052\dbch\af10\afs24\alang1081\loch\f0\fs24\lang1040\li0\ri-6\lin0\rin-6\fi0{\cf1\i\b0\rtlch \ltrch\loch\fs18\loch\f5
+ITER_TO_WAIT_SHUTDOWN=3}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af12\langfe2052\dbch\af10\afs24\alang1081\loch\f0\fs24\lang1040\li0\ri-6\lin0\rin-6\fi0{\cf1\i\b0\rtlch \ltrch\loch\fs18\loch\f5
+POWER_DOWN_TIMEOUT=5}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af12\langfe2052\dbch\af10\afs24\alang1081\loch\f0\fs24\lang1040\li0\ri-6\lin0\rin-6\fi0{\cf1\i\b0\rtlch \ltrch\loch\fs18\loch\f5
+ENABLE_COMPRESSION=0}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af12\langfe2052\dbch\af10\afs24\alang1081\loch\f0\fs24\lang1040\li0\ri-6\lin0\rin-6\fi0{\cf1\i\b0\rtlch \ltrch\loch\fs18\loch\f5
+ADAPTER_FORMAT=buslogic}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af12\langfe2052\dbch\af10\afs24\alang1081\loch\f0\fs24\lang1040\li0\ri-6\lin0\rin-6\fi0{\cf1\i\b0\rtlch \ltrch\loch\fs18\loch\f5
+VM_SNAPSHOT_MEMORY=0}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af12\langfe2052\dbch\af10\afs24\alang1081\loch\f0\fs24\lang1040\li0\ri-6\lin0\rin-6\fi0{\cf1\i\b0\rtlch \ltrch\loch\fs18\loch\f5
+VM_SNAPSHOT_QUIESCE=0}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af12\langfe2052\dbch\af10\afs24\alang1081\loch\f0\fs24\lang1040\li0\ri-6\lin0\rin-6\fi0{\cf1\i\b0\rtlch \ltrch\loch\fs18\loch\f5
+SNAPSHOT_TIMEOUT=15}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af12\langfe2052\dbch\af10\afs24\alang1081\loch\f0\fs24\lang1040\li0\ri-6\lin0\rin-6\fi0\rtlch \ltrch\loch
+
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af12\langfe2052\dbch\af10\afs24\alang1081\loch\f0\fs24\lang1040\li0\ri-6\lin0\rin-6\fi0{\cf1\i\b0\rtlch \ltrch\loch\fs18\loch\f5
+se voglio solo alcuni vmdk}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af12\langfe2052\dbch\af10\afs24\alang1081\loch\f0\fs24\lang1040\li0\ri-6\lin0\rin-6\fi0\rtlch \ltrch\loch
+
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af12\langfe2052\dbch\af10\afs24\alang1081\loch\f0\fs24\lang1040\li0\ri-6\lin0\rin-6\fi0{\scaps0\caps0\cf4\expnd0\expndtw0\i0\b0\rtlch \ltrch\loch\fs24\loch\f8
+VMDK_FILES_TO_BACKUP=\u8221\'1dnomevm.vmdk,altronoemvm.vmdk2\u8221\'1d}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af12\langfe2052\dbch\af10\afs24\alang1081\loch\f0\fs24\lang1040\li0\ri-6\lin0\rin-6\fi0\cf1\i0\b0\rtlch \ltrch\loch\fs18\loch\f5
+
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af12\langfe2052\dbch\af10\afs24\alang1081\loch\f0\fs24\lang1040\li0\ri-6\lin0\rin-6\fi0\cf1\i0\b0\rtlch \ltrch\loch\fs18\loch\f5
+
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af12\langfe2052\dbch\af10\afs24\alang1081\loch\f0\fs24\lang1040\sl276\slmult1\li0\ri-6\lin0\rin-6\fi0\sb0\sa200{\cf1\i0\b0\rtlch \ltrch\loch\fs18\loch\f5
+Copiare i files dell\u8217\'19archivio }{\cf1\i\b\rtlch \ltrch\loch\fs18\loch\f5
+BACKUP-ESXi.zip}{\cf1\i0\b0\rtlch \ltrch\loch\fs18\loch\f5
+ in directory della XPCONSOLE, editare il file }{\cf1\i\b\rtlch \ltrch\loch\fs18\loch\f5
+backup_esxi.bat }{\cf1\i0\b0\rtlch \ltrch\loch\fs18\loch\f5
+ inserendo i parametri in tutte le voci }{\cf1\i0\b\rtlch \ltrch\loch\fs18\loch\f5
+set}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af12\langfe2052\dbch\af10\afs24\alang1081\loch\f0\fs24\lang1040\sl276\slmult1\li0\ri-6\lin0\rin-6\fi0\sb0\sa200{\cf1\i0\b0\rtlch \ltrch\loch\fs18\loch\f5
+Creare poi una operazione pianificata che lanci il file }{\cf1\i\b\rtlch \ltrch\loch\fs18\loch\f5
+backup_esxi.bat  }{\cf1\i0\b0\rtlch \ltrch\loch\fs18\loch\f5
+nell\u8217\'19orario e nei giorni desiderati.}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af12\langfe2052\dbch\af10\afs24\alang1081\loch\f0\fs24\lang1040\sl276\slmult1\li0\ri-6\lin0\rin-6\fi0\sb0\sa200\cf1\i0\b0\rtlch \ltrch\loch\fs18\loch\f5
+
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af12\langfe2052\dbch\af10\afs24\alang1081\loch\f0\fs24\lang1040\sl276\slmult1\li0\ri-6\lin0\rin-6\fi0\sb0\sa200{\cf1\i0\b0\rtlch \ltrch\loch\fs18\loch\f5
+Riferimenti:}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af12\langfe2052\dbch\af10\afs24\alang1081\loch\f0\fs24\lang1040\sl276\slmult1\li0\ri-6\lin0\rin-6\fi0\sb0\sa200{\cf1\i\b\rtlch \ltrch\loch\fs24\loch\f5
+ghettoVCB}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af12\langfe2052\dbch\af10\afs24\alang1081\loch\f0\fs24\lang1040\sl276\slmult1\li0\ri-6\lin0\rin-6\fi0\sb0\sa200{{\field{\*\fldinst HYPERLINK "http://communities.vmware.com/docs/DOC-8760" }\cf2\i0\ul\ulc2\b0{\fldrslt \cf3\ul\ulc0\langfe255\alang255\lang255\rtlch \ltrch\loch\fs22\loch\f7
+http://communities.vmware.com/docs/DOC-8760}}}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af12\langfe2052\dbch\af10\afs24\alang1081\loch\f0\fs24\lang1040\sl276\slmult1\li0\ri-6\lin0\rin-6\fi0\sb0\sa200\rtlch \ltrch\loch
+
+\par }

@@ -1,0 +1,1465 @@
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr" class="client-nojs">
+<head>
+<title>Esx-health.pl code - blog.peacon.co.uk</title>
+<meta charset="UTF-8" />
+<meta name="generator" content="MediaWiki 1.18.0" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="blog.peacon.co.uk (en-gb)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://blog.peacon.co.uk/w/api.php?action=rsd" />
+<link rel="alternate" type="application/atom+xml" title="blog.peacon.co.uk Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="stylesheet" href="/w/load.php?debug=false&amp;lang=en-gb&amp;modules=mediawiki.legacy.commonPrint%2Cshared%7Cskins.vector&amp;only=styles&amp;skin=vector&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: blog_wiki:resourceloader:filter:minify-css:4:c88e2bcd56513749bec09a7e29cb3ffa */
+</style>
+<script src="/w/load.php?debug=false&amp;lang=en-gb&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+	mw.config.set({"wgCanonicalNamespace": "", "wgCanonicalSpecialPageName": false, "wgNamespaceNumber": 0, "wgPageName": "Esx-health.pl_code", "wgTitle": "Esx-health.pl code", "wgCurRevisionId": 474, "wgArticleId": 25, "wgIsArticle": true, "wgAction": "view", "wgUserName": null, "wgUserGroups": ["*"], "wgCategories": [], "wgBreakFrames": false, "wgRestrictionEdit": [], "wgRestrictionMove": [], "wgWikiEditorEnabledModules": {"toolbar": false, "dialogs": false, "hidesig": true, "templateEditor": false, "templates": false, "preview": false, "previewDialog": false, "publish": false, "toc": false}, "wgVectorEnabledModules": {"collapsiblenav": true, "collapsibletabs": true, "editwarning": false, "expandablesearch": false, "footercleanup": false, "sectioneditlinks": false, "simplesearch": true, "experiments": true}});
+}
+</script><script>if(window.mw){
+	mw.loader.load(["mediawiki.page.startup"]);
+}
+</script>
+<style type="text/css">/*<![CDATA[*/
+.source-perl {line-height: normal;}
+.source-perl li, .source-perl pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for perl
+ * CSS class: source-perl, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie (http://qbnz.com/highlighter)
+ */
+.source-perl .de1, .source-perl .de2 {font-family: 'Courier New', Courier, monospace; font-weight: normal;}
+.source-perl  {}
+.source-perl .head {}
+.source-perl .foot {}
+.source-perl .imp {font-weight: bold; color: red;}
+.source-perl .ln-xtra {color: #cc0; background-color: #ffc;}
+.source-perl li {font-family: 'Courier New', Courier, monospace; color: black; font-weight: normal; font-style: normal;}
+.source-perl li.li2 {font-weight: bold;}
+.source-perl .kw1 {color: #b1b100;}
+.source-perl .kw2 {color: #000000; font-weight: bold;}
+.source-perl .kw3 {color: #000066;}
+.source-perl .co1 {color: #808080; font-style: italic;}
+.source-perl .coMULTI {color: #808080; font-style: italic;}
+.source-perl .es0 {color: #000099; font-weight: bold;}
+.source-perl .br0 {color: #66cc66;}
+.source-perl .st0 {color: #ff0000;}
+.source-perl .nu0 {color: #cc66cc;}
+.source-perl .me1 {color: #006600;}
+.source-perl .me2 {color: #006600;}
+.source-perl .re0 {color: #0000ff;}
+.source-perl .re4 {color: #009999;}
+
+/*]]>*/
+</style>
+<style type="text/css">/*<![CDATA[*/
+@import "/w/index.php?title=MediaWiki:Geshi.css&usemsgcache=yes&action=raw&ctype=text/css&smaxage=18000";
+/*]]>*/
+</style><!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Esx-health_pl_code action-view skin-vector">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<!-- content -->
+		<div id="content">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading">Esx-health.pl code</h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">From blog.peacon.co.uk</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				<div id="jump-to-nav">
+					Jump to: <a href="#mw-head">navigation</a>,
+					<a href="#p-search">search</a>
+				</div>
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div lang="en-gb" dir="ltr" class="mw-content-ltr"><p>Below is the complete source code for <a href="/wiki/Esx-health.pl" title="Esx-health.pl">esx-health.pl</a>.
+</p><p>Please read the <a href="/wiki/Peacon_code_terms_of_use" title="Peacon code terms of use">peacon code terms of use</a> and if you find this script useful, please consider <a rel="nofollow" class="external text" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=B7WBPPPC5Q3UW">donating a quid</a> towards the site running costs!
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><pre class="source-perl"><span class="co1">#!/usr/bin/perl -w</span>
+<span class="co1">#</span>
+<span class="co1"># Orignally developed by William Lam, 12/11/2009</span>
+<span class="co1">#   http://engineering.ucsb.edu/~duonglt/vmware</span>
+<span class="co1">#   http://communities.vmware.com/docs/DOC-9852</span>
+<span class="co1">#</span>
+<span class="co1"># Further development by James Pearce</span>
+<span class="co1">#</span>
+<span class="co1"># Updated 18-Jan-10</span>
+<span class="co1">#   - Enhanced report layout wih colour coding of line items according to status</span>
+<span class="co1">#   - Added ALERT reference to message title if alerts (non-green) status items are present</span>
+<span class="co1">#   - Added simple check of CPU and RAM usage, and reporting on these</span>
+<span class="co1">#   - Added command line email options (optional)</span>
+<span class="co1">#   - Removed reference to UNIX RM command (report html is now kept in working folder)</span>
+<span class="co1">#   - Added append to log file of date/time and result (log file is command line option)</span>
+<span class="co1">#   - Amended report name</span>
+<span class="co1">#</span>
+<span class="co1"># Updated 01-Aug-10</span>
+<span class="co1">#   - Added optional command line parameters 'memwarnpc' and 'cpuwarnpc', which allow the</span>
+<span class="co1">#     percentage utilisation at which to generate a warning for these functions.</span>
+<span class="co1">#     If not specified, defaults are 75% for CPU and 85% for RAM.</span>
+<span class="co1">#</span>
+<span class="co1"># Updated 02-Aug-10</span>
+<span class="co1">#   - Corrected reporting on numeric sensor values (i.e. fan speeds, temperatures etc)</span>
+<span class="co1">#     per input from Murray Finch</span>
+<span class="co1">#</span>
+<span class="co1"># Updated 18-Aug-10</span>
+<span class="co1">#   - Added ability to exclude output matching specified criteria per input from</span>
+<span class="co1">#     reader Tim</span>
+<span class="co1">#</span>
+<span class="co1"># Updated 12-Oct-10</span>
+<span class="co1">#   - Added ability to track the number of alerts between runs, using this to send an</span>
+<span class="co1">#     alert by email only if it has changed, per the request of reader Jonas.</span>
+<span class="co1">#</span>
+<span class="co1"># Updated 07-Nov-10</span>
+<span class="co1">#   - Added --warnofsnapshots option, which considers any running VM with a snapshot</span>
+<span class="co1">#     to be a warning condition</span>
+<span class="co1">#   - Added datastore usage checking (see switches dscriticalpc and dswarnpc)</span>
+<span class="co1">#   - Added multiple email recipient ability (seperate mail addresses with semi-colon)</span>
+<span class="co1">#</span>
+<span class="co1">#</span>
+<span class="co1"># Updated 09-Nov-10</span>
+<span class="co1">#   - Added --statusfile option, to enable seperate warning status tracking when used</span>
+<span class="co1">#     with multiple hosts</span>
+<span class="co1">#</span>
+<span class="co1"># Updated 8-Jan-11</span>
+<span class="co1">#   - Added --concise option, which includes only section headings with alert</span>
+<span class="co1">#     items in them, and only the alert items themselves, to aid viewing on Blackberry</span>
+<span class="co1">#     and so on</span>
+<span class="co1">#   - Added summary to section titles (such as Healthy, 1 warning, etc)</span>
+<span class="co1">#</span>
+<span class="co1"># Updated 23-Nov-11</span>
+<span class="co1">#   - Added --warnonalerts option, which modifies --alertonchange to always send mail</span>
+<span class="co1">#     if alert count &gt; 0</span>
+<span class="co1">#   - Minor fixes &amp; coding improvements</span>
+<span class="co1">#</span>
+&#160;
+<span class="kw2">use</span> strict;
+<span class="kw2">use</span> warnings;
+<span class="kw2">use</span> VMware::<span class="me2">VIRuntime</span>;
+<span class="kw2">use</span> VMware::<span class="me2">VILib</span>;
+<span class="kw2">use</span> Net::<span class="me2">SMTP</span>;
+&#160;
+&#160;
+<span class="co1"># define custom options for vm and target host</span>
+<span class="kw1">my</span> <span class="re0">%opts</span> = <span class="br0">&#40;</span>
+   <span class="st0">'hostfile'</span> =&gt; <span class="br0">&#123;</span>
+      type =&gt; <span class="st0">&quot;=s&quot;</span>,
+      help =&gt; <span class="st0">&quot;List of hosts to perform operation on&quot;</span>,
+      required =&gt; <span class="nu0">0</span>,
+   <span class="br0">&#125;</span>,
+   <span class="st0">'reportname'</span> =&gt; <span class="br0">&#123;</span>
+      type =&gt; <span class="st0">&quot;=s&quot;</span>,
+      help =&gt; <span class="st0">&quot;Name of the report to email out&quot;</span>,
+      required =&gt; <span class="nu0">0</span>,
+      default =&gt; <span class="st0">'esx-host-health-report.html'</span>,
+   <span class="br0">&#125;</span>,
+   <span class="st0">'mailhost'</span> =&gt; <span class="br0">&#123;</span>
+      type =&gt; <span class="st0">&quot;=s&quot;</span>,
+      help =&gt; <span class="st0">&quot;DNS name of mail server to use to send report&quot;</span>,
+      required =&gt; <span class="nu0">0</span>,
+      default =&gt; <span class="st0">''</span>,
+   <span class="br0">&#125;</span>,
+   <span class="st0">'maildomain'</span> =&gt; <span class="br0">&#123;</span>
+      type =&gt; <span class="st0">&quot;=s&quot;</span>,
+      help =&gt; <span class="st0">&quot;Email domain name (i.e. vmware.com)&quot;</span>,
+      required =&gt; <span class="nu0">0</span>,
+      default =&gt; <span class="st0">''</span>,
+   <span class="br0">&#125;</span>,
+   <span class="st0">'mailfrom'</span> =&gt; <span class="br0">&#123;</span>
+      type =&gt; <span class="st0">&quot;=s&quot;</span>,
+      help =&gt; <span class="st0">&quot;Email address alerts will be sent from&quot;</span>,
+      required =&gt; <span class="nu0">0</span>,
+      default =&gt; <span class="st0">''</span>,
+   <span class="br0">&#125;</span>,
+   <span class="st0">'mailto'</span> =&gt; <span class="br0">&#123;</span>
+      type =&gt; <span class="st0">&quot;=s&quot;</span>,
+      help =&gt; <span class="st0">&quot;Email address of recipient&quot;</span>,
+      required =&gt; <span class="nu0">0</span>,
+      default =&gt; <span class="st0">''</span>,
+   <span class="br0">&#125;</span>,
+   <span class="st0">'cpuwarnpc'</span> =&gt; <span class="br0">&#123;</span>
+      type =&gt; <span class="st0">&quot;=i&quot;</span>,
+      help =&gt; <span class="st0">&quot;Percentage CPU utilisation at which to warn (i.e. 75 to warn if &gt;75%)&quot;</span>,
+      required =&gt; <span class="nu0">0</span>,
+      default =&gt; <span class="nu0">75</span>,
+   <span class="br0">&#125;</span>,
+   <span class="st0">'memwarnpc'</span> =&gt; <span class="br0">&#123;</span>
+      type =&gt; <span class="st0">&quot;=i&quot;</span>,
+      help =&gt; <span class="st0">&quot;Percentage RAM utilisation at which to warn (i.e. 85 to warn if &gt;85%)&quot;</span>,
+      required =&gt; <span class="nu0">0</span>,
+      default =&gt; <span class="nu0">85</span>,
+   <span class="br0">&#125;</span>,
+   <span class="st0">'dswarnpc'</span> =&gt; <span class="br0">&#123;</span>
+      type =&gt; <span class="st0">&quot;=i&quot;</span>,
+      help =&gt; <span class="st0">&quot;Percentage of datastore free space at which to warn (i.e. 25 to warn if &lt;25% free)&quot;</span>,
+      required =&gt; <span class="nu0">0</span>,
+      default =&gt; <span class="nu0">25</span>,
+   <span class="br0">&#125;</span>,
+   <span class="st0">'dscriticalpc'</span> =&gt; <span class="br0">&#123;</span>
+      type =&gt; <span class="st0">&quot;=i&quot;</span>,
+      help =&gt; <span class="st0">&quot;Percentage of datastore free space at which to warn RED (i.e. 10 to warn if &lt;10% free)&quot;</span>,
+      required =&gt; <span class="nu0">0</span>,
+      default =&gt; <span class="nu0">10</span>,
+   <span class="br0">&#125;</span>,
+   <span class="st0">'exclude'</span> =&gt; <span class="br0">&#123;</span>
+      type =&gt; <span class="st0">&quot;=s&quot;</span>,
+      help =&gt; <span class="st0">&quot;PERL Regular expression to supress certain sensors (i.e. 'Power Supply' or 'PSU 2|Fan 4|Intrusion')&quot;</span>,
+      required =&gt; <span class="nu0">0</span>,
+      default =&gt; <span class="st0">'zzzzz'</span>,
+   <span class="br0">&#125;</span>,
+   <span class="st0">'warnofsnapshots'</span> =&gt; <span class="br0">&#123;</span>
+      type =&gt; <span class="st0">&quot;&quot;</span>,
+      help =&gt; <span class="st0">&quot;Consider running VMs with snapshots to be alert items&quot;</span>,
+      required =&gt; <span class="nu0">0</span>,
+      default =&gt; <span class="nu0">0</span>,
+   <span class="br0">&#125;</span>,
+   <span class="st0">'warnonchange'</span> =&gt; <span class="br0">&#123;</span>
+      type =&gt; <span class="st0">&quot;&quot;</span>,
+      help =&gt; <span class="st0">&quot;Only send an email alert if the number of warnings reported has changed since last run&quot;</span>,
+      required =&gt; <span class="nu0">0</span>,
+      default =&gt; <span class="nu0">0</span>,
+   <span class="br0">&#125;</span>,
+   <span class="st0">'warnonalerts'</span> =&gt; <span class="br0">&#123;</span>
+      type =&gt; <span class="st0">&quot;&quot;</span>,
+      help =&gt; <span class="st0">&quot;Modifies --alertonchange to always send mail if alert count &gt; 0&quot;</span>,
+      required =&gt; <span class="nu0">0</span>,
+      default =&gt; <span class="nu0">0</span>,
+   <span class="br0">&#125;</span>,
+   <span class="st0">'concise'</span> =&gt; <span class="br0">&#123;</span>
+      type =&gt; <span class="st0">&quot;&quot;</span>,
+      help =&gt; <span class="st0">&quot;Include on report only section headings with alert counts and alert items&quot;</span>,
+      required =&gt; <span class="nu0">0</span>,
+      default =&gt; <span class="nu0">0</span>,
+   <span class="br0">&#125;</span>,
+   <span class="st0">'logfile'</span> =&gt; <span class="br0">&#123;</span>
+      type =&gt; <span class="st0">&quot;=s&quot;</span>,
+      help =&gt; <span class="st0">&quot;Name of logfile to use&quot;</span>,
+      required =&gt; <span class="nu0">0</span>,
+      default =&gt; <span class="st0">'esx-health.log'</span>,
+   <span class="br0">&#125;</span>,
+   <span class="st0">'statusfile'</span> =&gt; <span class="br0">&#123;</span>
+      type =&gt; <span class="st0">&quot;=s&quot;</span>,
+      help =&gt; <span class="st0">&quot;Name of file to store host alerts in (for use with --warnonchange)&quot;</span>,
+      required =&gt; <span class="nu0">0</span>,
+      default =&gt; <span class="st0">'esx-health-status.txt'</span>,
+   <span class="br0">&#125;</span>,
+<span class="br0">&#41;</span>;
+&#160;
+<span class="co1"># read and validate command-line parameters </span>
+Opts::<span class="me2">add_options</span><span class="br0">&#40;</span><span class="re0">%opts</span><span class="br0">&#41;</span>;
+Opts::<span class="me2">parse</span><span class="br0">&#40;</span><span class="br0">&#41;</span>;
+Opts::<span class="me2">validate</span><span class="br0">&#40;</span><span class="br0">&#41;</span>;
+Util::<span class="kw3">connect</span><span class="br0">&#40;</span><span class="br0">&#41;</span>;
+&#160;
+&#160;
+<span class="co1"># CHECK HOST IS ESX 3.5 OR ABOVE</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$hosttype</span> = &amp;validateConnection<span class="br0">&#40;</span><span class="st0">'3.5.0'</span>,<span class="st0">'undef'</span>,<span class="st0">'both'</span><span class="br0">&#41;</span>;
+&#160;
+&#160;
+<span class="co1"># GLOBAL VARS</span>
+&#160;
+<span class="kw1">my</span> <span class="br0">&#40;</span><span class="re0">$host_view</span>,<span class="re0">$task_ref</span>,<span class="re0">$hostfile</span>,<span class="re0">$reportname</span>,<span class="re0">$mailhost</span>,<span class="re0">$maildomain</span>,<span class="re0">$mailfrom</span>,<span class="re0">$mailto</span><span class="br0">&#41;</span>;
+<span class="kw1">my</span> <span class="br0">&#40;</span><span class="re0">$cpuwarnpc</span>,<span class="re0">$memwarnpc</span>,<span class="re0">$dswarnpc</span>,<span class="re0">$dscriticalpc</span>,<span class="re0">$exclude</span>,<span class="re0">$warnonchange</span>,<span class="re0">$warnonalerts</span>,<span class="re0">$warnofsnapshots</span>,<span class="re0">$concise</span><span class="br0">&#41;</span>;
+<span class="kw1">my</span> <span class="br0">&#40;</span><span class="re0">$logfile</span>,<span class="re0">$statusfile</span><span class="br0">&#41;</span>;
+<span class="kw1">my</span> <span class="re0">@host_list</span> = <span class="br0">&#40;</span><span class="br0">&#41;</span>;
+<span class="kw1">my</span> <span class="re0">$debug</span> = <span class="nu0">1</span>;
+<span class="kw1">my</span> <span class="re0">$report_name</span> = <span class="st0">&quot;ESX host health report&quot;</span>;
+<span class="kw1">my</span> <span class="re0">$alerts</span> = <span class="nu0">0</span>;
+&#160;
+<span class="re0">$hostfile</span> = Opts::<span class="me2">get_option</span><span class="br0">&#40;</span><span class="st0">&quot;hostfile&quot;</span><span class="br0">&#41;</span>;
+<span class="re0">$reportname</span> = Opts::<span class="me2">get_option</span><span class="br0">&#40;</span><span class="st0">&quot;reportname&quot;</span><span class="br0">&#41;</span>;
+<span class="re0">$mailhost</span> = Opts::<span class="me2">get_option</span><span class="br0">&#40;</span><span class="st0">&quot;mailhost&quot;</span><span class="br0">&#41;</span>;
+<span class="re0">$maildomain</span> = Opts::<span class="me2">get_option</span><span class="br0">&#40;</span><span class="st0">&quot;maildomain&quot;</span><span class="br0">&#41;</span>;
+<span class="re0">$mailfrom</span> = Opts::<span class="me2">get_option</span><span class="br0">&#40;</span><span class="st0">&quot;mailfrom&quot;</span><span class="br0">&#41;</span>;
+<span class="re0">$mailto</span> = Opts::<span class="me2">get_option</span><span class="br0">&#40;</span><span class="st0">&quot;mailto&quot;</span><span class="br0">&#41;</span>;
+<span class="re0">$cpuwarnpc</span> = Opts::<span class="me2">get_option</span><span class="br0">&#40;</span><span class="st0">&quot;cpuwarnpc&quot;</span><span class="br0">&#41;</span>;
+<span class="re0">$memwarnpc</span> = Opts::<span class="me2">get_option</span><span class="br0">&#40;</span><span class="st0">&quot;memwarnpc&quot;</span><span class="br0">&#41;</span>;
+<span class="re0">$dswarnpc</span> = Opts::<span class="me2">get_option</span><span class="br0">&#40;</span><span class="st0">&quot;dswarnpc&quot;</span><span class="br0">&#41;</span>;
+<span class="re0">$dscriticalpc</span> = Opts::<span class="me2">get_option</span><span class="br0">&#40;</span><span class="st0">&quot;dscriticalpc&quot;</span><span class="br0">&#41;</span>;
+<span class="re0">$exclude</span> = Opts::<span class="me2">get_option</span><span class="br0">&#40;</span><span class="st0">&quot;exclude&quot;</span><span class="br0">&#41;</span>;
+<span class="re0">$warnonchange</span> = Opts::<span class="me2">get_option</span><span class="br0">&#40;</span><span class="st0">&quot;warnonchange&quot;</span><span class="br0">&#41;</span>;
+<span class="re0">$warnonalerts</span> = Opts::<span class="me2">get_option</span><span class="br0">&#40;</span><span class="st0">&quot;warnonalerts&quot;</span><span class="br0">&#41;</span>;
+<span class="re0">$warnofsnapshots</span> = Opts::<span class="me2">get_option</span><span class="br0">&#40;</span><span class="st0">&quot;warnofsnapshots&quot;</span><span class="br0">&#41;</span>;
+<span class="re0">$concise</span> = Opts::<span class="me2">get_option</span><span class="br0">&#40;</span><span class="st0">&quot;concise&quot;</span><span class="br0">&#41;</span>;
+<span class="re0">$logfile</span> = Opts::<span class="me2">get_option</span><span class="br0">&#40;</span><span class="st0">&quot;logfile&quot;</span><span class="br0">&#41;</span>;
+<span class="re0">$statusfile</span> = Opts::<span class="me2">get_option</span><span class="br0">&#40;</span><span class="st0">&quot;statusfile&quot;</span><span class="br0">&#41;</span>;
+&#160;
+<span class="kw1">my</span> <span class="re0">$LOG_FILE</span> = <span class="re0">$logfile</span>;
+<span class="kw1">my</span> <span class="re0">$STATUS_FILE</span> = <span class="re0">$statusfile</span>;
+&#160;
+<span class="co1"># EMAIL CONFIGURATION FROM COMMAND LINE PARAMETERS</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$SEND_MAIL</span> = <span class="st0">&quot;no&quot;</span>;
+<span class="kw1">my</span> <span class="re0">$EMAIL_HOST</span> = <span class="re0">$mailhost</span>;
+<span class="kw1">my</span> <span class="re0">$EMAIL_DOMAIN</span> = <span class="re0">$maildomain</span>;
+<span class="kw1">my</span> <span class="re0">$EMAIL_TO</span> = <span class="re0">$mailto</span>;
+<span class="kw1">my</span> <span class="re0">$EMAIL_FROM</span> = <span class="re0">$mailfrom</span>;
+<span class="kw1">my</span> <span class="re0">$EMAIL_SUBJECT_NORMAL</span> = <span class="st0">'vmware Host Health Report - Status Normal'</span>;
+<span class="kw1">my</span> <span class="re0">$EMAIL_SUBJECT_ALERTS</span> = <span class="st0">'vmware Host Health Report - ALERTS DETECTED'</span>;
+&#160;
+<span class="kw1">if</span><span class="br0">&#40;</span><span class="re0">$EMAIL_HOST</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+	<span class="co1"># user specified mail server; configure parameters for emailing output</span>
+	<span class="kw3">print</span> <span class="st0">&quot;Using mail host: $EMAIL_HOST.<span class="es0">\n</span>&quot;</span>;
+	<span class="re0">$SEND_MAIL</span> = <span class="st0">&quot;yes&quot;</span>;
+<span class="br0">&#125;</span>
+&#160;
+<span class="co1">## Datastore warning levels</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$DsWarnPC</span> = <span class="br0">&#40;</span><span class="re0">$dswarnpc</span> / <span class="nu0">100</span><span class="br0">&#41;</span>;
+<span class="kw1">my</span> <span class="re0">$DsCriticalPC</span> = <span class="br0">&#40;</span><span class="re0">$dscriticalpc</span> / <span class="nu0">100</span><span class="br0">&#41;</span>;
+&#160;
+<span class="co1"># set colour for datastores listed as inactive - GREEN, YELLOW, or RED</span>
+<span class="kw1">my</span> <span class="re0">$DsInactiveColour</span> = <span class="st0">'RED'</span>;
+&#160;
+<span class="co1"># determine reporting level</span>
+<span class="kw1">if</span> <span class="br0">&#40;</span><span class="re0">$concise</span><span class="br0">&#41;</span> <span class="br0">&#123;</span> <span class="re0">$debug</span> = <span class="nu0">0</span>; <span class="br0">&#125;</span>
+&#160;
+<span class="co1"># CONNECT AND GET HEALTH STATUS...</span>
+&#160;
+&amp;writelog<span class="br0">&#40;</span><span class="st0">&quot;&quot;</span><span class="br0">&#41;</span>; <span class="co1"># Linefeed to aid log review</span>
+&#160;
+<span class="re0">$alerts</span> = &amp;checkHosts<span class="br0">&#40;</span><span class="br0">&#41;</span>; <span class="co1"># connects to hosts and obtains data</span>
+&amp;endReportCreation<span class="br0">&#40;</span><span class="br0">&#41;</span>; <span class="co1"># writes out report footers etc</span>
+&#160;
+Util::<span class="me2">disconnect</span><span class="br0">&#40;</span><span class="br0">&#41;</span>;
+&#160;
+<span class="co1"># If required, check if number of alerts has changed</span>
+<span class="kw1">if</span> <span class="br0">&#40;</span><span class="re0">$warnonchange</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+  <span class="co1"># Don't send a mail if the number of alerts hasn't changed since last run...</span>
+  <span class="kw1">unless</span> <span class="br0">&#40;</span>&amp;alertschange<span class="br0">&#40;</span><span class="re0">$alerts</span><span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+    <span class="co1"># ... unless --warnonalerts is set (meaning to always generate a mail if alerts are present)</span>
+    <span class="kw1">if</span> <span class="br0">&#40;</span><span class="br0">&#40;</span><span class="re0">$warnonalerts</span><span class="br0">&#41;</span> &amp;&amp; <span class="br0">&#40;</span>!<span class="re0">$alerts</span><span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span> <span class="re0">$SEND_MAIL</span> = <span class="st0">&quot;no&quot;</span>; <span class="br0">&#125;</span>
+    <span class="kw1">elsif</span> <span class="br0">&#40;</span>!<span class="re0">$warnonalerts</span><span class="br0">&#41;</span> <span class="br0">&#123;</span> <span class="re0">$SEND_MAIL</span> = <span class="st0">&quot;no&quot;</span>; <span class="br0">&#125;</span>
+  <span class="br0">&#125;</span>
+<span class="br0">&#125;</span>
+&#160;
+<span class="co1"># Send report by email if required, and if mail server was specified on command line</span>
+<span class="kw1">if</span> <span class="br0">&#40;</span><span class="br0">&#40;</span><span class="re0">$SEND_MAIL</span> eq <span class="st0">&quot;yes&quot;</span><span class="br0">&#41;</span> &amp;&amp; <span class="br0">&#40;</span><span class="re0">$EMAIL_HOST</span><span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+	<span class="kw3">print</span> <span class="st0">&quot;Sending email to $EMAIL_TO.<span class="es0">\n</span>&quot;</span>;
+        &amp;sendMail<span class="br0">&#40;</span><span class="re0">$alerts</span><span class="br0">&#41;</span>;
+<span class="br0">&#125;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Done.<span class="es0">\n</span><span class="es0">\n</span>&quot;</span>;
+&#160;
+&#160;
+&#160;
+&#160;
+<span class="co1">############################################################################</span>
+<span class="co1"># MAIN SUB-ROUTINES; THESE DO THE WORK</span>
+<span class="co1">############################################################################</span>
+&#160;
+&#160;
+<span class="kw2">sub</span> checkHosts <span class="br0">&#123;</span>
+	<span class="kw1">my</span> <span class="br0">&#40;</span><span class="re0">$total_alerts</span><span class="br0">&#41;</span> = <span class="nu0">0</span>;
+	<span class="kw1">my</span> <span class="br0">&#40;</span><span class="re0">$host_alerts</span><span class="br0">&#41;</span> = <span class="nu0">0</span>;
+&#160;
+	<span class="kw1">if</span><span class="br0">&#40;</span><span class="re0">$hosttype</span> eq <span class="st0">'VirtualCenter'</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+		<span class="kw1">unless</span><span class="br0">&#40;</span><span class="re0">$hostfile</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+			Util::<span class="me2">disconnect</span><span class="br0">&#40;</span><span class="br0">&#41;</span>;
+			<span class="kw3">print</span> <span class="st0">&quot;Error: When connecting to vCenter, you must specify --hostfile and provide input file of the ESX(i) hosts you would like to check!<span class="es0">\n</span><span class="es0">\n</span>&quot;</span>;
+			&amp;writelog<span class="br0">&#40;</span><span class="st0">&quot;Error: --hostfile not specified for vCentre connection.&quot;</span><span class="br0">&#41;</span>;
+			<span class="kw3">exit</span> <span class="nu0">1</span>;
+		<span class="br0">&#125;</span>
+		&amp;startReportCreation<span class="br0">&#40;</span><span class="br0">&#41;</span>;
+		&amp;processFile<span class="br0">&#40;</span><span class="re0">$hostfile</span><span class="br0">&#41;</span>;
+		<span class="kw1">foreach</span> <span class="kw1">my</span> <span class="re0">$host_name</span><span class="br0">&#40;</span> <span class="re0">@host_list</span> <span class="br0">&#41;</span> <span class="br0">&#123;</span>
+                	<span class="kw3">chomp</span><span class="br0">&#40;</span><span class="re0">$host_name</span><span class="br0">&#41;</span>;
+                	<span class="re0">$host_view</span> = Vim::<span class="me2">find_entity_view</span><span class="br0">&#40;</span>view_type =&gt; <span class="st0">'HostSystem'</span>, filter =&gt; <span class="br0">&#123;</span> <span class="st0">'name'</span> =&gt; <span class="re0">$host_name</span><span class="br0">&#125;</span><span class="br0">&#41;</span>;
+			&amp;writelog<span class="br0">&#40;</span><span class="st0">&quot;ESX Server $host_name checked &quot;</span>.&amp;giveMeDate<span class="br0">&#40;</span><span class="st0">'DMY'</span><span class="br0">&#41;</span>.<span class="st0">&quot; at &quot;</span>.&amp;giveMeDate<span class="br0">&#40;</span><span class="st0">'HMS'</span><span class="br0">&#41;</span><span class="br0">&#41;</span>;
+			<span class="re0">$host_alerts</span> += &amp;getHardwareHealthInfo<span class="br0">&#40;</span><span class="re0">$host_view</span><span class="br0">&#41;</span>;
+			<span class="re0">$total_alerts</span> += <span class="re0">$host_alerts</span>;
+			&amp;writelog<span class="br0">&#40;</span><span class="st0">&quot;  $host_name had $host_alerts alerts.&quot;</span><span class="br0">&#41;</span>;
+			<span class="re0">$host_alerts</span> = <span class="nu0">0</span>;
+		<span class="br0">&#125;</span>
+	<span class="br0">&#125;</span> <span class="kw1">else</span> <span class="br0">&#123;</span>
+		&amp;startReportCreation<span class="br0">&#40;</span><span class="br0">&#41;</span>;
+		<span class="re0">$host_view</span> = Vim::<span class="me2">find_entity_view</span><span class="br0">&#40;</span>view_type =&gt; <span class="st0">'HostSystem'</span><span class="br0">&#41;</span>;
+		<span class="kw1">my</span> <span class="re0">$host_name</span> = <span class="re0">$host_view</span>-&gt;<span class="me1">name</span>;
+		&amp;writelog<span class="br0">&#40;</span><span class="st0">&quot;ESX Server $host_name checked &quot;</span>.&amp;giveMeDate<span class="br0">&#40;</span><span class="st0">'DMY'</span><span class="br0">&#41;</span>.<span class="st0">&quot; at &quot;</span>.&amp;giveMeDate<span class="br0">&#40;</span><span class="st0">'HMS'</span><span class="br0">&#41;</span><span class="br0">&#41;</span>;
+		<span class="re0">$total_alerts</span> += &amp;getHardwareHealthInfo<span class="br0">&#40;</span><span class="re0">$host_view</span><span class="br0">&#41;</span>;
+		&amp;writelog<span class="br0">&#40;</span><span class="st0">&quot;  $host_name had $total_alerts alerts.&quot;</span><span class="br0">&#41;</span>;		
+	<span class="br0">&#125;</span>
+&#160;
+<span class="kw3">return</span> <span class="re0">$total_alerts</span>;
+&#160;
+<span class="br0">&#125;</span>
+&#160;
+&#160;
+<span class="kw2">sub</span> getHardwareHealthInfo <span class="br0">&#123;</span>
+	<span class="kw1">my</span> <span class="br0">&#40;</span><span class="re0">$host_view</span><span class="br0">&#41;</span> = <span class="re0">@_</span>;
+&#160;
+	<span class="kw1">my</span> <span class="br0">&#40;</span><span class="re0">$err_count</span><span class="br0">&#41;</span> = <span class="nu0">0</span>;
+&#160;
+	<span class="kw1">if</span><span class="br0">&#40;</span><span class="re0">$host_view</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+		<span class="kw1">my</span> <span class="re0">$host_name</span> = <span class="re0">$host_view</span>-&gt;<span class="me1">name</span>;
+		<span class="kw3">print</span> REPORT_OUTPUT <span class="st0">&quot;&lt;div id=<span class="es0">\&quot;</span>wrapper<span class="es0">\&quot;</span>&gt;<span class="es0">\n</span>&quot;</span>;
+&#160;
+		<span class="kw1">my</span> <span class="re0">$hardwareSystem</span> = Vim::<span class="me2">get_view</span><span class="br0">&#40;</span>mo_ref =&gt; <span class="re0">$host_view</span>-&gt;<span class="me1">configManager</span>-&gt;<span class="me1">healthStatusSystem</span><span class="br0">&#41;</span>;
+		<span class="kw1">my</span> <span class="br0">&#40;</span><span class="re0">$cpu</span>,<span class="re0">$mem</span>,<span class="re0">$storage</span>,<span class="re0">@sensors</span>,<span class="re0">@datastores</span>,<span class="re0">@vmsnaps</span><span class="br0">&#41;</span>;
+		<span class="kw1">if</span><span class="br0">&#40;</span><span class="re0">$hardwareSystem</span>-&gt;<span class="me1">runtime</span>-&gt;<span class="me1">hardwareStatusInfo</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>	
+			<span class="co1">###########</span>
+			<span class="co1"># CPU</span>
+			<span class="co1">###########</span>
+			<span class="kw1">my</span> <span class="re0">$cpuStatus</span> = <span class="re0">$hardwareSystem</span>-&gt;<span class="me1">runtime</span>-&gt;<span class="me1">hardwareStatusInfo</span>-&gt;<span class="me1">cpuStatusInfo</span>;
+			<span class="kw1">foreach</span><span class="br0">&#40;</span><span class="re0">@$cpuStatus</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+				<span class="kw1">if</span><span class="br0">&#40;</span><span class="re0">$_</span>-&gt;<span class="me1">status</span>-&gt;<span class="me1">key</span> <span class="kw1">ne</span> <span class="st0">'Green'</span> || <span class="re0">$debug</span> eq <span class="nu0">1</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+					<span class="kw1">if</span> <span class="br0">&#40;</span><span class="re0">$_</span>-&gt;<span class="me1">name</span>&#160;!~ /<span class="re0">$exclude</span>/<span class="br0">&#41;</span> <span class="br0">&#123;</span>
+						<span class="co1"># only report if it doesn't match the exclude line</span>
+						<span class="re0">$cpu</span> .= &amp;newBullet<span class="br0">&#40;</span><span class="re0">$_</span>-&gt;<span class="me1">name</span>,&amp;rep_color<span class="br0">&#40;</span><span class="re0">$_</span>-&gt;<span class="me1">status</span>-&gt;<span class="me1">key</span><span class="br0">&#41;</span><span class="br0">&#41;</span>;
+						<span class="kw1">if</span><span class="br0">&#40;</span><span class="re0">$_</span>-&gt;<span class="me1">status</span>-&gt;<span class="me1">key</span> <span class="kw1">ne</span> <span class="st0">'Green'</span><span class="br0">&#41;</span> <span class="br0">&#123;</span> <span class="re0">$err_count</span> += <span class="nu0">1</span>; <span class="br0">&#125;</span>
+					<span class="br0">&#125;</span>
+				<span class="br0">&#125;</span>
+			<span class="br0">&#125;</span>
+&#160;
+			<span class="co1">###########</span>
+			<span class="co1"># MEMORY</span>
+			<span class="co1">###########</span>
+			<span class="kw1">my</span> <span class="re0">$memStatus</span> = <span class="re0">$hardwareSystem</span>-&gt;<span class="me1">runtime</span>-&gt;<span class="me1">hardwareStatusInfo</span>-&gt;<span class="me1">memoryStatusInfo</span>;
+			<span class="kw1">foreach</span><span class="br0">&#40;</span><span class="re0">@$memStatus</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+				<span class="kw1">if</span><span class="br0">&#40;</span><span class="re0">$_</span>-&gt;<span class="me1">status</span>-&gt;<span class="me1">key</span> <span class="kw1">ne</span> <span class="st0">'Green'</span> || <span class="re0">$debug</span> eq <span class="nu0">1</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+					<span class="kw1">if</span> <span class="br0">&#40;</span><span class="re0">$_</span>-&gt;<span class="me1">name</span>&#160;!~ /<span class="re0">$exclude</span>/<span class="br0">&#41;</span> <span class="br0">&#123;</span>
+						<span class="co1"># only report if it doesn't match the exclude line</span>
+						<span class="re0">$mem</span> .= &amp;newBullet<span class="br0">&#40;</span><span class="re0">$_</span>-&gt;<span class="me1">name</span>,&amp;rep_color<span class="br0">&#40;</span><span class="re0">$_</span>-&gt;<span class="me1">status</span>-&gt;<span class="me1">key</span><span class="br0">&#41;</span><span class="br0">&#41;</span>;
+						<span class="kw1">if</span><span class="br0">&#40;</span><span class="re0">$_</span>-&gt;<span class="me1">status</span>-&gt;<span class="me1">key</span> <span class="kw1">ne</span> <span class="st0">'Green'</span><span class="br0">&#41;</span> <span class="br0">&#123;</span> <span class="re0">$err_count</span> += <span class="nu0">1</span>; <span class="br0">&#125;</span>
+					<span class="br0">&#125;</span>
+				<span class="br0">&#125;</span>
+			<span class="br0">&#125;</span>
+&#160;
+			<span class="co1">###########</span>
+			<span class="co1"># STORAGE </span>
+			<span class="co1">###########</span>
+			<span class="kw1">my</span> <span class="re0">$stoStatus</span> = <span class="re0">$hardwareSystem</span>-&gt;<span class="me1">runtime</span>-&gt;<span class="me1">hardwareStatusInfo</span>-&gt;<span class="me1">storageStatusInfo</span>;
+			<span class="kw1">foreach</span><span class="br0">&#40;</span><span class="re0">@$stoStatus</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+				<span class="kw1">if</span><span class="br0">&#40;</span><span class="re0">$_</span>-&gt;<span class="me1">status</span>-&gt;<span class="me1">key</span> <span class="kw1">ne</span> <span class="st0">'Green'</span> || <span class="re0">$debug</span> eq <span class="nu0">1</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+					<span class="kw1">if</span> <span class="br0">&#40;</span><span class="re0">$_</span>-&gt;<span class="me1">name</span>&#160;!~ /<span class="re0">$exclude</span>/<span class="br0">&#41;</span> <span class="br0">&#123;</span>
+						<span class="co1"># only report if it doesn't match the exclude line</span>
+						<span class="re0">$storage</span> .= &amp;newBullet<span class="br0">&#40;</span><span class="re0">$_</span>-&gt;<span class="me1">name</span>,&amp;rep_color<span class="br0">&#40;</span><span class="re0">$_</span>-&gt;<span class="me1">status</span>-&gt;<span class="me1">key</span><span class="br0">&#41;</span><span class="br0">&#41;</span>;
+						<span class="kw1">if</span><span class="br0">&#40;</span><span class="re0">$_</span>-&gt;<span class="me1">status</span>-&gt;<span class="me1">key</span> <span class="kw1">ne</span> <span class="st0">'Green'</span><span class="br0">&#41;</span> <span class="br0">&#123;</span> <span class="re0">$err_count</span> += <span class="nu0">1</span>; <span class="br0">&#125;</span>
+					<span class="br0">&#125;</span>
+                       		<span class="br0">&#125;</span>
+               		<span class="br0">&#125;</span>
+		<span class="br0">&#125;</span>
+&#160;
+		<span class="kw1">if</span><span class="br0">&#40;</span><span class="re0">$hardwareSystem</span>-&gt;<span class="me1">runtime</span>-&gt;<span class="me1">systemHealthInfo</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+			<span class="co1">##########################</span>
+			<span class="co1"># OTHER SYSTEM COMPONENTS</span>
+			<span class="co1">##########################</span>
+			<span class="kw1">my</span> <span class="re0">$sensorInfo</span> = <span class="re0">$hardwareSystem</span>-&gt;<span class="me1">runtime</span>-&gt;<span class="me1">systemHealthInfo</span>-&gt;<span class="me1">numericSensorInfo</span>;
+			<span class="kw1">foreach</span><span class="br0">&#40;</span><span class="re0">@$sensorInfo</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+				<span class="kw1">if</span><span class="br0">&#40;</span><span class="re0">$_</span>-&gt;<span class="me1">healthState</span> &amp;&amp; <span class="re0">$_</span>-&gt;<span class="me1">healthState</span>-&gt;<span class="me1">label</span> <span class="kw1">ne</span> <span class="st0">'Green'</span> || <span class="re0">$debug</span> eq <span class="nu0">1</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+					<span class="kw1">if</span> <span class="br0">&#40;</span><span class="re0">$_</span>-&gt;<span class="me1">name</span>&#160;!~ /<span class="re0">$exclude</span>/<span class="br0">&#41;</span> <span class="br0">&#123;</span>
+						<span class="co1"># only report if it doesn't match the exclude line</span>
+						<span class="kw1">my</span> <span class="re0">$reading</span> = <span class="re0">$_</span>-&gt;<span class="me1">currentReading</span> * <span class="nu0">10</span> ** <span class="re0">$_</span>-&gt;<span class="me1">unitModifier</span>; 
+						<span class="kw1">my</span> <span class="re0">$units</span>;
+						<span class="kw1">if</span><span class="br0">&#40;</span><span class="re0">$_</span>-&gt;<span class="me1">rateUnits</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+							<span class="re0">$units</span> = <span class="re0">$_</span>-&gt;<span class="me1">baseUnits</span> . <span class="st0">&quot;/&quot;</span> . <span class="re0">$_</span>-&gt;<span class="me1">rateUnits</span>;
+						<span class="br0">&#125;</span> <span class="kw1">else</span> <span class="br0">&#123;</span> <span class="re0">$units</span> = <span class="re0">$_</span>-&gt;<span class="me1">baseUnits</span>; <span class="br0">&#125;</span>
+						<span class="kw1">my</span> <span class="re0">$sensor_string</span> = <span class="re0">$_</span>-&gt;<span class="me1">sensorType</span> . <span class="st0">&quot;==&quot;</span> . &amp;newBullet<span class="br0">&#40;</span> <span class="br0">&#40;</span><span class="re0">$_</span>-&gt;<span class="me1">name</span> .<span class="st0">&quot;: &quot;</span>. <span class="re0">$reading</span> .<span class="st0">&quot; &quot;</span>. <span class="re0">$units</span><span class="br0">&#41;</span>, &amp;rep_color<span class="br0">&#40;</span><span class="re0">$_</span>-&gt;<span class="me1">healthState</span>-&gt;<span class="me1">key</span><span class="br0">&#41;</span> <span class="br0">&#41;</span>;
+						<span class="kw3">push</span> <span class="re0">@sensors</span>,<span class="re0">$sensor_string</span>;
+						<span class="kw1">if</span><span class="br0">&#40;</span><span class="re0">$_</span>-&gt;<span class="me1">healthState</span>-&gt;<span class="me1">label</span> <span class="kw1">ne</span> <span class="st0">'Green'</span><span class="br0">&#41;</span> <span class="br0">&#123;</span> <span class="re0">$err_count</span> += <span class="nu0">1</span>; <span class="br0">&#125;</span>					
+					<span class="br0">&#125;</span>
+				<span class="br0">&#125;</span>
+			<span class="br0">&#125;</span>
+		<span class="br0">&#125;</span>
+&#160;
+&#160;
+		<span class="co1">#######################</span>
+		<span class="co1"># CHECK CPU/RAM USAGE</span>
+		<span class="co1">#######################</span>
+&#160;
+		<span class="kw1">my</span> <span class="re0">$memTotalSize</span> = round<span class="br0">&#40;</span> <span class="re0">$host_view</span>-&gt;<span class="me1">summary</span>-&gt;<span class="me1">hardware</span>-&gt;<span class="me1">memorySize</span>/<span class="nu0">1024</span>/<span class="nu0">1024</span> <span class="br0">&#41;</span>;
+		<span class="kw1">my</span> <span class="re0">$memCurrentUse</span> = <span class="re0">$host_view</span>-&gt;<span class="me1">summary</span>-&gt;<span class="me1">quickStats</span>-&gt;<span class="me1">overallMemoryUsage</span>;
+		<span class="kw1">my</span> <span class="re0">$cpuTotalSpeed</span> = round<span class="br0">&#40;</span> <span class="re0">$host_view</span>-&gt;<span class="me1">hardware</span>-&gt;<span class="me1">cpuInfo</span>-&gt;<span class="me1">hz</span> *
+					<span class="re0">$host_view</span>-&gt;<span class="me1">hardware</span>-&gt;<span class="me1">cpuInfo</span>-&gt;<span class="me1">numCpuCores</span> / <span class="nu0">1000000</span> <span class="br0">&#41;</span>;
+		<span class="kw1">my</span> <span class="re0">$cpuCurrentLoad</span> = <span class="re0">$host_view</span>-&gt;<span class="me1">summary</span>-&gt;<span class="me1">quickStats</span>-&gt;<span class="me1">overallCpuUsage</span>;
+&#160;
+		<span class="kw1">my</span> <span class="re0">$memUse</span> = &amp;check_use<span class="br0">&#40;</span><span class="re0">$memCurrentUse</span>,<span class="re0">$memTotalSize</span>,<span class="re0">$memwarnpc</span><span class="br0">&#41;</span>;
+		<span class="kw1">my</span> <span class="re0">$cpuUse</span> = &amp;check_use<span class="br0">&#40;</span><span class="re0">$cpuCurrentLoad</span>,<span class="re0">$cpuTotalSpeed</span>,<span class="re0">$cpuwarnpc</span><span class="br0">&#41;</span>;
+&#160;
+		<span class="kw1">if</span> <span class="br0">&#40;</span><span class="re0">$cpuUse</span> <span class="kw1">ne</span> <span class="st0">'Green'</span><span class="br0">&#41;</span> <span class="br0">&#123;</span> <span class="re0">$err_count</span> +=<span class="nu0">1</span>; <span class="br0">&#125;</span>; 
+		<span class="kw1">if</span> <span class="br0">&#40;</span><span class="re0">$memUse</span> <span class="kw1">ne</span> <span class="st0">'Green'</span><span class="br0">&#41;</span> <span class="br0">&#123;</span> <span class="re0">$err_count</span> +=<span class="nu0">1</span>; <span class="br0">&#125;</span>;
+&#160;
+&#160;
+		<span class="co1">#######################</span>
+		<span class="co1"># CHECK DATASTORE USAGE</span>
+		<span class="co1">#######################</span>
+&#160;
+		<span class="kw1">my</span> <span class="re0">$DSs</span> = Vim::<span class="me2">get_views</span><span class="br0">&#40;</span>mo_ref_array =&gt; <span class="re0">$host_view</span>-&gt;<span class="me1">datastore</span><span class="br0">&#41;</span>;
+		<span class="kw1">my</span> <span class="re0">$totalDSs</span> = <span class="nu0">0</span>;
+		<span class="kw1">my</span> <span class="re0">$Accessible</span> = <span class="st0">&quot;&quot;</span>;
+		<span class="kw1">my</span> <span class="re0">$capacity</span> = <span class="nu0">0</span>;
+		<span class="kw1">my</span> <span class="re0">$free</span> = <span class="nu0">0</span>;
+		<span class="kw1">my</span> <span class="br0">&#40;</span><span class="re0">$dsstring</span>, <span class="re0">$dscolour</span>, <span class="re0">$dsavailable</span><span class="br0">&#41;</span>;
+		<span class="kw1">foreach</span><span class="br0">&#40;</span><span class="re0">@$DSs</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+			<span class="re0">$totalDSs</span> += <span class="nu0">1</span>;
+			<span class="kw1">if</span><span class="br0">&#40;</span><span class="re0">$_</span>-&gt;<span class="me1">summary</span>-&gt;<span class="me1">accessible</span><span class="br0">&#41;</span> <span class="br0">&#123;</span> <span class="re0">$Accessible</span> = <span class="st0">&quot;Accessible&quot;</span>; <span class="br0">&#125;</span>
+			<span class="kw1">else</span> <span class="br0">&#123;</span> <span class="re0">$Accessible</span> = <span class="st0">&quot;Inaccessible&quot;</span>; <span class="br0">&#125;</span>
+&#160;
+			<span class="re0">$capacity</span> = <span class="br0">&#40;</span><span class="br0">&#40;</span><span class="re0">$_</span>-&gt;<span class="me1">summary</span>-&gt;<span class="me1">capacity</span><span class="br0">&#41;</span>/<span class="nu0">1073741824</span><span class="br0">&#41;</span>;
+			<span class="re0">$free</span> = <span class="br0">&#40;</span><span class="br0">&#40;</span><span class="re0">$_</span>-&gt;<span class="me1">summary</span>-&gt;<span class="me1">freeSpace</span><span class="br0">&#41;</span>/<span class="nu0">1073741824</span><span class="br0">&#41;</span>;
+			<span class="re0">$dsavailable</span> = <span class="nu0">0</span>;
+&#160;
+			<span class="kw1">if</span> <span class="br0">&#40;</span><span class="re0">$_</span>-&gt;<span class="me1">summary</span>-&gt;<span class="me1">accessible</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+				<span class="re0">$dsavailable</span> = <span class="br0">&#40;</span><span class="re0">$free</span>/<span class="re0">$capacity</span><span class="br0">&#41;</span>;
+				<span class="kw1">if</span> <span class="br0">&#40;</span><span class="re0">$dsavailable</span> &lt; <span class="re0">$DsCriticalPC</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+					<span class="re0">$dscolour</span> = <span class="st0">'RED'</span>;
+				<span class="br0">&#125;</span> <span class="kw1">elsif</span> <span class="br0">&#40;</span><span class="re0">$dsavailable</span> &lt; <span class="re0">$DsWarnPC</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+					<span class="re0">$dscolour</span> = <span class="st0">'YELLOW'</span>;
+				<span class="br0">&#125;</span> <span class="kw1">else</span> <span class="br0">&#123;</span>
+					<span class="re0">$dscolour</span> = <span class="st0">'GREEN'</span>;
+				<span class="br0">&#125;</span>
+			<span class="br0">&#125;</span> <span class="kw1">else</span> <span class="br0">&#123;</span>
+				<span class="co1">#inaccessible datastores will listed according to $DsInactiveColour;</span>
+				<span class="re0">$dscolour</span> = <span class="re0">$DsInactiveColour</span>;
+			<span class="br0">&#125;</span>
+&#160;
+			<span class="kw1">if</span> <span class="br0">&#40;</span><span class="re0">$_</span>-&gt;<span class="me1">summary</span>-&gt;<span class="me1">name</span>&#160;!~ /<span class="re0">$exclude</span>/<span class="br0">&#41;</span> <span class="br0">&#123;</span>
+				<span class="kw1">if</span> <span class="br0">&#40;</span><span class="re0">$dscolour</span> <span class="kw1">ne</span> <span class="st0">'GREEN'</span> || <span class="re0">$debug</span> eq <span class="nu0">1</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+					<span class="co1"># only report if it doesn't match the exclude line</span>
+				 	<span class="kw1">if</span> <span class="br0">&#40;</span><span class="re0">$dscolour</span> <span class="kw1">ne</span> <span class="st0">'GREEN'</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+				 		<span class="re0">$err_count</span> += <span class="nu0">1</span>;
+				 	<span class="br0">&#125;</span>
+					<span class="kw1">if</span> <span class="br0">&#40;</span><span class="re0">$Accessible</span> eq <span class="st0">'Accessible'</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+						<span class="re0">$dsstring</span> = &amp;newBullet<span class="br0">&#40;</span> <span class="br0">&#40;</span><span class="re0">$_</span>-&gt;<span class="me1">summary</span>-&gt;<span class="me1">name</span> .<span class="st0">&quot;&#160;: &quot;</span>.
+								&amp;commify<span class="br0">&#40;</span><span class="kw3">int</span><span class="br0">&#40;</span><span class="re0">$free</span><span class="br0">&#41;</span><span class="br0">&#41;</span>.<span class="st0">&quot;GB free (&quot;</span>.<span class="kw3">int</span><span class="br0">&#40;</span><span class="nu0">100</span>*<span class="re0">$dsavailable</span><span class="br0">&#41;</span>.<span class="st0">&quot;%) / &quot;</span>.
+								&amp;commify<span class="br0">&#40;</span><span class="kw3">int</span><span class="br0">&#40;</span><span class="re0">$capacity</span><span class="br0">&#41;</span><span class="br0">&#41;</span>.<span class="st0">&quot;GB&quot;</span><span class="br0">&#41;</span>,&amp;rep_color<span class="br0">&#40;</span><span class="re0">$dscolour</span><span class="br0">&#41;</span> <span class="br0">&#41;</span>;
+					<span class="br0">&#125;</span> <span class="kw1">else</span> <span class="br0">&#123;</span>
+						<span class="re0">$dsstring</span> = &amp;newBullet<span class="br0">&#40;</span> <span class="br0">&#40;</span><span class="re0">$_</span>-&gt;<span class="me1">summary</span>-&gt;<span class="me1">name</span> .<span class="st0">&quot; (&quot;</span>.<span class="re0">$Accessible</span>.<span class="st0">&quot;)&quot;</span><span class="br0">&#41;</span>,
+								&amp;rep_color<span class="br0">&#40;</span><span class="re0">$dscolour</span><span class="br0">&#41;</span> <span class="br0">&#41;</span>;
+					<span class="br0">&#125;</span>
+					<span class="kw3">push</span> <span class="re0">@datastores</span>,<span class="re0">$dsstring</span>;
+				<span class="br0">&#125;</span>					
+			<span class="br0">&#125;</span>					
+		<span class="br0">&#125;</span>
+&#160;
+		<span class="co1">#######################</span>
+		<span class="co1"># CHECK VMs FOR SNAPSHOTS, IF REQUESTED</span>
+		<span class="co1">#######################</span>
+&#160;
+		<span class="kw1">if</span> <span class="br0">&#40;</span><span class="re0">$warnofsnapshots</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+			<span class="kw1">my</span> <span class="re0">$vms</span> = Vim::<span class="me2">get_views</span><span class="br0">&#40;</span>mo_ref_array =&gt; <span class="re0">$host_view</span>-&gt;<span class="me1">vm</span>,
+						 properties =&gt; <span class="br0">&#91;</span><span class="st0">'name'</span>,<span class="st0">'runtime.powerState'</span>,<span class="st0">'snapshot'</span><span class="br0">&#93;</span><span class="br0">&#41;</span>;
+			<span class="kw1">foreach</span><span class="br0">&#40;</span><span class="re0">@$vms</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+				<span class="kw1">if</span> <span class="br0">&#40;</span> <span class="br0">&#40;</span><span class="re0">$_</span>-&gt;<span class="br0">&#123;</span><span class="st0">'runtime.powerState'</span><span class="br0">&#125;</span>-&gt;<span class="me1">val</span> eq <span class="st0">&quot;poweredOn&quot;</span><span class="br0">&#41;</span> &amp;&amp; <span class="re0">$_</span>-&gt;<span class="br0">&#123;</span><span class="st0">'snapshot'</span><span class="br0">&#125;</span> <span class="br0">&#41;</span> <span class="br0">&#123;</span>
+					<span class="kw3">push</span> <span class="re0">@vmsnaps</span>, &amp;newBullet<span class="br0">&#40;</span> <span class="br0">&#40;</span><span class="re0">$_</span>-&gt;<span class="br0">&#123;</span><span class="st0">'name'</span><span class="br0">&#125;</span><span class="br0">&#41;</span>,&amp;rep_color<span class="br0">&#40;</span><span class="st0">'YELLOW'</span><span class="br0">&#41;</span> <span class="br0">&#41;</span>;
+					<span class="re0">$err_count</span> += <span class="nu0">1</span>;
+				<span class="br0">&#125;</span>
+			<span class="br0">&#125;</span>
+		<span class="br0">&#125;</span>
+&#160;
+		<span class="co1">#######################</span>
+		<span class="co1"># PRINT SUMMARY</span>
+		<span class="co1">#######################</span>
+&#160;
+		<span class="kw1">my</span> <span class="re0">$build</span> = <span class="re0">$host_view</span>-&gt;<span class="me1">summary</span>-&gt;<span class="me1">config</span>-&gt;<span class="me1">product</span>-&gt;<span class="me1">fullName</span> <span class="kw1">if</span><span class="br0">&#40;</span><span class="re0">$host_view</span>-&gt;<span class="me1">summary</span>-&gt;<span class="me1">config</span>-&gt;<span class="me1">product</span>-&gt;<span class="me1">fullName</span><span class="br0">&#41;</span>;
+&#160;
+		<span class="co1"># output title for hostname</span>
+		<span class="kw3">print</span> <span class="st0">&quot;Processing $host_name ($build): $err_count alerts.<span class="es0">\n</span>&quot;</span>;
+		<span class="kw3">print</span> REPORT_OUTPUT <span class="st0">&quot;&lt;div style='border:none;border-top:solid windowtext 1.0pt;padding:1.0pt 0cm 0cm 0cm'&gt;<span class="es0">\n</span>&quot;</span>;
+		<span class="kw3">print</span> REPORT_OUTPUT <span class="st0">&quot;&lt;h2 style='border:none;padding:0cm'&gt;$host_name&lt;/h2&gt;<span class="es0">\n</span>&quot;</span>;
+		<span class="kw3">print</span> REPORT_OUTPUT <span class="st0">&quot;&lt;/div&gt;<span class="es0">\n</span>&quot;</span>;
+		<span class="kw3">print</span> REPORT_OUTPUT <span class="st0">&quot;&lt;p class=MsoNormal&gt;$build: &quot;</span>;
+&#160;
+		<span class="co1">#everything okay?</span>
+&#160;
+		<span class="kw1">if</span> <span class="br0">&#40;</span><span class="re0">$err_count</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+			<span class="kw1">my</span> <span class="re0">$plural</span> = <span class="st0">&quot;&quot;</span>;
+			<span class="kw1">if</span> <span class="br0">&#40;</span><span class="re0">$err_count</span> &gt; <span class="nu0">1</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+				<span class="re0">$plural</span> = <span class="st0">&quot;s&quot;</span>;
+			<span class="br0">&#125;</span>
+			<span class="kw3">print</span> REPORT_OUTPUT <span class="st0">&quot;&lt;span style=<span class="es0">\&quot;</span>color:FireBrick<span class="es0">\&quot;</span>&gt;Host has $err_count alert&quot;</span>.<span class="re0">$plural</span>.<span class="st0">&quot;:&lt;/span&gt;&lt;/b&gt;&lt;/p&gt;<span class="es0">\n</span>&quot;</span>;
+             	<span class="br0">&#125;</span> <span class="kw1">else</span> <span class="br0">&#123;</span>
+			<span class="kw3">print</span> REPORT_OUTPUT <span class="st0">&quot;&lt;span style=<span class="es0">\&quot;</span>color:DarkGreen<span class="es0">\&quot;</span>&gt;Host is healthy.&lt;/span&gt;&lt;/b&gt;&lt;/p&gt;<span class="es0">\n</span>&quot;</span>;
+		<span class="br0">&#125;</span>
+&#160;
+		<span class="co1">#CPU and Memory info lines, coloured as required.  Concise exludes these, unless there is a warning.</span>
+&#160;
+		<span class="kw1">if</span> <span class="br0">&#40;</span><span class="re0">$cpuUse</span> <span class="kw1">ne</span> <span class="st0">'Green'</span> || <span class="re0">$memUse</span> <span class="kw1">ne</span> <span class="st0">'Green'</span> || <span class="re0">$debug</span> eq <span class="nu0">1</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+			<span class="kw3">print</span> REPORT_OUTPUT <span class="st0">&quot;&lt;br&gt;<span class="es0">\n</span>&quot;</span>;
+			<span class="kw3">print</span> REPORT_OUTPUT &amp;htmlHeading<span class="br0">&#40;</span><span class="st0">&quot;CURRENT USAGE&quot;</span><span class="br0">&#41;</span>;
+			<span class="kw1">if</span> <span class="br0">&#40;</span><span class="br0">&#40;</span><span class="re0">$cpuUse</span> <span class="kw1">ne</span> <span class="st0">'Green'</span><span class="br0">&#41;</span> || <span class="br0">&#40;</span><span class="re0">$debug</span> eq <span class="nu0">1</span><span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+				<span class="kw3">print</span> REPORT_OUTPUT &amp;newBullet<span class="br0">&#40;</span><span class="st0">&quot;CPU: &quot;</span>
+							.round<span class="br0">&#40;</span><span class="re0">$cpuCurrentLoad</span>/<span class="re0">$cpuTotalSpeed</span>*<span class="nu0">100</span><span class="br0">&#41;</span>
+							.<span class="st0">&quot;%&quot;</span>,&amp;rep_color<span class="br0">&#40;</span><span class="re0">$cpuUse</span><span class="br0">&#41;</span><span class="br0">&#41;</span>;
+			<span class="br0">&#125;</span>
+			<span class="kw1">if</span> <span class="br0">&#40;</span><span class="br0">&#40;</span><span class="re0">$memUse</span> <span class="kw1">ne</span> <span class="st0">'Green'</span><span class="br0">&#41;</span> || <span class="br0">&#40;</span><span class="re0">$debug</span> eq <span class="nu0">1</span><span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+				<span class="kw3">print</span> REPORT_OUTPUT &amp;newBullet<span class="br0">&#40;</span><span class="st0">&quot;RAM: &quot;</span>
+							.round<span class="br0">&#40;</span><span class="re0">$memCurrentUse</span>/<span class="re0">$memTotalSize</span>*<span class="nu0">100</span><span class="br0">&#41;</span>
+							.<span class="st0">&quot;%&quot;</span>,&amp;rep_color<span class="br0">&#40;</span><span class="re0">$memUse</span><span class="br0">&#41;</span><span class="br0">&#41;</span>;
+			<span class="br0">&#125;</span>
+		<span class="br0">&#125;</span>
+&#160;
+		<span class="co1">#check categories for problems</span>
+		<span class="kw1">my</span> <span class="br0">&#40;</span><span class="re0">$warnings</span>, <span class="re0">$criticals</span>, <span class="re0">$title</span><span class="br0">&#41;</span>;
+&#160;
+		<span class="kw1">if</span><span class="br0">&#40;</span><span class="re0">$cpu</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+			<span class="re0">$warnings</span> = &amp;checkItems<span class="br0">&#40;</span><span class="re0">$cpu</span>, <span class="st0">&quot;DarkGoldenRod&quot;</span><span class="br0">&#41;</span>;
+			<span class="re0">$criticals</span> = &amp;checkItems<span class="br0">&#40;</span><span class="re0">$cpu</span>, <span class="st0">&quot;FireBrick&quot;</span><span class="br0">&#41;</span>;
+			<span class="re0">$title</span> = &amp;prepareTitle<span class="br0">&#40;</span> <span class="st0">&quot;CPU COMPONENTS&quot;</span>, <span class="re0">$warnings</span>, <span class="re0">$criticals</span> <span class="br0">&#41;</span>;
+&#160;
+			<span class="kw3">print</span> REPORT_OUTPUT <span class="st0">&quot;&lt;br&gt;<span class="es0">\n</span>&quot;</span>;
+			<span class="kw3">print</span> REPORT_OUTPUT &amp;htmlHeading<span class="br0">&#40;</span><span class="re0">$title</span><span class="br0">&#41;</span>;
+			<span class="kw3">print</span> REPORT_OUTPUT <span class="re0">$cpu</span>;
+		<span class="br0">&#125;</span>
+		<span class="kw1">if</span><span class="br0">&#40;</span><span class="re0">$mem</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+			<span class="re0">$warnings</span> = &amp;checkItems<span class="br0">&#40;</span><span class="re0">$mem</span>, <span class="st0">&quot;DarkGoldenRod&quot;</span><span class="br0">&#41;</span>;
+			<span class="re0">$criticals</span> = &amp;checkItems<span class="br0">&#40;</span><span class="re0">$mem</span>, <span class="st0">&quot;FireBrick&quot;</span><span class="br0">&#41;</span>;
+			<span class="re0">$title</span> = &amp;prepareTitle<span class="br0">&#40;</span> <span class="st0">&quot;MEMORY COMPONENTS&quot;</span>, <span class="re0">$warnings</span>, <span class="re0">$criticals</span> <span class="br0">&#41;</span>;		
+			<span class="kw3">print</span> REPORT_OUTPUT <span class="st0">&quot;&lt;br&gt;<span class="es0">\n</span>&quot;</span>;
+			<span class="kw3">print</span> REPORT_OUTPUT &amp;htmlHeading<span class="br0">&#40;</span><span class="re0">$title</span><span class="br0">&#41;</span>;
+			<span class="kw3">print</span> REPORT_OUTPUT <span class="re0">$mem</span>; 
+		<span class="br0">&#125;</span>
+		<span class="kw1">if</span><span class="br0">&#40;</span><span class="re0">$storage</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+			<span class="re0">$warnings</span> = &amp;checkItems<span class="br0">&#40;</span><span class="re0">$storage</span>, <span class="st0">&quot;DarkGoldenRod&quot;</span><span class="br0">&#41;</span>;
+			<span class="re0">$criticals</span> = &amp;checkItems<span class="br0">&#40;</span><span class="re0">$storage</span>, <span class="st0">&quot;FireBrick&quot;</span><span class="br0">&#41;</span>;
+			<span class="re0">$title</span> = &amp;prepareTitle<span class="br0">&#40;</span> <span class="st0">&quot;STORAGE COMPONENTS&quot;</span>, <span class="re0">$warnings</span>, <span class="re0">$criticals</span> <span class="br0">&#41;</span>;
+			<span class="kw3">print</span> REPORT_OUTPUT <span class="st0">&quot;&lt;br&gt;<span class="es0">\n</span>&quot;</span>;
+			<span class="kw3">print</span> REPORT_OUTPUT &amp;htmlHeading<span class="br0">&#40;</span><span class="re0">$title</span><span class="br0">&#41;</span>;
+			<span class="kw3">print</span> REPORT_OUTPUT <span class="re0">$storage</span>; 
+		<span class="br0">&#125;</span>
+		<span class="kw1">if</span><span class="br0">&#40;</span><span class="re0">@datastores</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+			<span class="re0">$warnings</span> = <span class="nu0">0</span>;
+			<span class="re0">$criticals</span> = <span class="nu0">0</span>;
+			<span class="kw1">foreach</span><span class="br0">&#40;</span><span class="re0">@datastores</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+				<span class="re0">$warnings</span> += &amp;checkItems<span class="br0">&#40;</span><span class="re0">$_</span>, <span class="st0">&quot;DarkGoldenRod&quot;</span><span class="br0">&#41;</span>;
+				<span class="re0">$criticals</span> += &amp;checkItems<span class="br0">&#40;</span><span class="re0">$_</span>, <span class="st0">&quot;FireBrick&quot;</span><span class="br0">&#41;</span>;
+			<span class="br0">&#125;</span>
+			<span class="re0">$title</span> = &amp;prepareTitle<span class="br0">&#40;</span> <span class="st0">&quot;DATASTORES&quot;</span>, <span class="re0">$warnings</span>, <span class="re0">$criticals</span> <span class="br0">&#41;</span>;
+			<span class="kw3">print</span> REPORT_OUTPUT <span class="st0">&quot;&lt;br&gt;<span class="es0">\n</span>&quot;</span>;
+			<span class="kw3">print</span> REPORT_OUTPUT &amp;htmlHeading<span class="br0">&#40;</span><span class="re0">$title</span><span class="br0">&#41;</span>;
+			<span class="kw1">foreach</span><span class="br0">&#40;</span><span class="re0">@datastores</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+				<span class="kw3">print</span> REPORT_OUTPUT <span class="re0">$_</span>;
+			<span class="br0">&#125;</span>
+		<span class="br0">&#125;</span>
+		<span class="kw1">if</span><span class="br0">&#40;</span><span class="re0">@vmsnaps</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+			<span class="re0">$warnings</span> = <span class="nu0">0</span>;
+			<span class="re0">$criticals</span> = <span class="nu0">0</span>;
+			<span class="kw1">foreach</span><span class="br0">&#40;</span><span class="re0">@vmsnaps</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+				<span class="re0">$warnings</span> += &amp;checkItems<span class="br0">&#40;</span><span class="re0">$_</span>, <span class="st0">&quot;DarkGoldenRod&quot;</span><span class="br0">&#41;</span>;
+				<span class="re0">$criticals</span> += &amp;checkItems<span class="br0">&#40;</span><span class="re0">$_</span>, <span class="st0">&quot;FireBrick&quot;</span><span class="br0">&#41;</span>;
+			<span class="br0">&#125;</span>
+			<span class="re0">$title</span> = &amp;prepareTitle<span class="br0">&#40;</span> <span class="st0">&quot;RUNNING VMs WITH SNAPSHOTS&quot;</span>, <span class="re0">$warnings</span>, <span class="re0">$criticals</span> <span class="br0">&#41;</span>;
+			<span class="kw3">print</span> REPORT_OUTPUT <span class="st0">&quot;&lt;br&gt;<span class="es0">\n</span>&quot;</span>;
+			<span class="kw3">print</span> REPORT_OUTPUT &amp;htmlHeading<span class="br0">&#40;</span><span class="re0">$title</span><span class="br0">&#41;</span>;
+			<span class="kw1">foreach</span><span class="br0">&#40;</span><span class="re0">@vmsnaps</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+				<span class="kw3">print</span> REPORT_OUTPUT <span class="re0">$_</span>;
+			<span class="br0">&#125;</span>
+		<span class="br0">&#125;</span>
+&#160;
+		<span class="kw1">if</span><span class="br0">&#40;</span><span class="re0">@sensors</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+			<span class="kw1">my</span> <span class="re0">%seen</span>;
+			<span class="kw1">foreach</span><span class="br0">&#40;</span><span class="re0">@sensors</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+				<span class="kw1">my</span> <span class="br0">&#40;</span><span class="re0">$component</span>,<span class="re0">$sensor</span><span class="br0">&#41;</span> = <span class="kw3">split</span><span class="br0">&#40;</span><span class="st0">'=='</span>,<span class="re0">$_</span><span class="br0">&#41;</span>;
+				<span class="re0">$warnings</span> = &amp;checkItems<span class="br0">&#40;</span><span class="re0">$sensor</span>, <span class="st0">&quot;DarkGoldenRod&quot;</span><span class="br0">&#41;</span>;
+				<span class="re0">$criticals</span> = &amp;checkItems<span class="br0">&#40;</span><span class="re0">$sensor</span>, <span class="st0">&quot;FireBrick&quot;</span><span class="br0">&#41;</span>;
+				<span class="kw1">if</span><span class="br0">&#40;</span>!<span class="re0">$seen</span><span class="br0">&#123;</span><span class="re0">$component</span><span class="br0">&#125;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+					<span class="re0">$seen</span><span class="br0">&#123;</span><span class="re0">$component</span><span class="br0">&#125;</span> = <span class="st0">&quot;yes&quot;</span>;
+					<span class="kw1">my</span> <span class="re0">$type</span> = <span class="kw3">uc</span> <span class="re0">$component</span>;
+					<span class="re0">$title</span> = &amp;prepareTitle<span class="br0">&#40;</span> <span class="st0">&quot;$type COMPONENTS&quot;</span>, <span class="re0">$warnings</span>, <span class="re0">$criticals</span> <span class="br0">&#41;</span>;
+					<span class="kw3">print</span> REPORT_OUTPUT <span class="st0">&quot;&lt;br&gt;<span class="es0">\n</span>&quot;</span>;
+					<span class="kw3">print</span> REPORT_OUTPUT &amp;htmlHeading<span class="br0">&#40;</span><span class="re0">$title</span><span class="br0">&#41;</span>;
+				<span class="br0">&#125;</span>
+				<span class="kw1">if</span><span class="br0">&#40;</span><span class="re0">$seen</span><span class="br0">&#123;</span><span class="re0">$component</span><span class="br0">&#125;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span> 
+					<span class="kw3">print</span> REPORT_OUTPUT <span class="re0">$sensor</span>;
+				<span class="br0">&#125;</span>
+			<span class="br0">&#125;</span>
+			<span class="kw3">print</span> REPORT_OUTPUT <span class="st0">&quot;&lt;br&gt;<span class="es0">\n</span>&quot;</span>;
+			<span class="kw3">print</span> REPORT_OUTPUT <span class="st0">&quot;&lt;/span&gt;&lt;/p&gt;<span class="es0">\n</span>&quot;</span>;
+&#160;
+		<span class="br0">&#125;</span>
+		<span class="kw3">print</span> REPORT_OUTPUT <span class="st0">&quot;&lt;/div&gt;<span class="es0">\n</span>&quot;</span>	
+	<span class="br0">&#125;</span>
+&#160;
+<span class="kw3">return</span> <span class="re0">$err_count</span>;
+&#160;
+<span class="br0">&#125;</span>
+&#160;
+&#160;
+&#160;
+&#160;
+<span class="co1">########################</span>
+<span class="co1"># HELPER FUNCTIONS</span>
+<span class="co1">########################</span>
+&#160;
+&#160;
+<span class="kw2">sub</span> checkItems <span class="br0">&#123;</span>
+	<span class="kw1">my</span> <span class="br0">&#40;</span><span class="re0">$list</span>, <span class="re0">$search</span><span class="br0">&#41;</span> = <span class="re0">@_</span>;
+	<span class="kw1">my</span> <span class="re0">$items</span> = <span class="nu0">0</span>;
+&#160;
+	<span class="kw1">while</span> <span class="br0">&#40;</span><span class="re0">$list</span> =~ /<span class="re0">$search</span>/g<span class="br0">&#41;</span> <span class="br0">&#123;</span> <span class="re0">$items</span>++ <span class="br0">&#125;</span>
+&#160;
+	<span class="kw3">return</span> <span class="br0">&#40;</span><span class="re0">$items</span> / <span class="nu0">2</span><span class="br0">&#41;</span>;
+<span class="br0">&#125;</span>
+&#160;
+&#160;
+<span class="kw2">sub</span> prepareTitle <span class="br0">&#123;</span>
+	<span class="kw1">my</span> <span class="br0">&#40;</span><span class="re0">$title</span>, <span class="re0">$warnings</span>, <span class="re0">$criticals</span><span class="br0">&#41;</span> = <span class="re0">@_</span>;
+	<span class="kw1">my</span> <span class="re0">$returnStr</span> = <span class="re0">$title</span>;
+&#160;
+	<span class="kw1">if</span> <span class="br0">&#40;</span><span class="re0">$warnings</span><span class="br0">&#41;</span> <span class="br0">&#123;</span> <span class="re0">$returnStr</span> = <span class="re0">$returnStr</span> . <span class="st0">&quot; - &quot;</span>. <span class="re0">$warnings</span> . <span class="st0">&quot; warning &quot;</span>; <span class="br0">&#125;</span>
+	<span class="kw1">if</span> <span class="br0">&#40;</span><span class="re0">$warnings</span> &amp;&amp; <span class="re0">$criticals</span><span class="br0">&#41;</span> <span class="br0">&#123;</span> <span class="re0">$returnStr</span> = <span class="re0">$returnStr</span> . <span class="st0">&quot; and &quot;</span>; <span class="br0">&#125;</span>
+	<span class="kw1">if</span> <span class="br0">&#40;</span>!<span class="re0">$warnings</span><span class="br0">&#41;</span> <span class="br0">&#123;</span> <span class="re0">$returnStr</span> = <span class="re0">$returnStr</span> . <span class="st0">&quot; - &quot;</span>;<span class="br0">&#125;</span>
+	<span class="kw1">if</span> <span class="br0">&#40;</span><span class="re0">$criticals</span><span class="br0">&#41;</span> <span class="br0">&#123;</span> <span class="re0">$returnStr</span> = <span class="re0">$returnStr</span> . <span class="re0">$criticals</span> . <span class="st0">&quot; critical &quot;</span>; <span class="br0">&#125;</span>
+&#160;
+	<span class="kw1">if</span> <span class="br0">&#40;</span><span class="re0">$warnings</span> || <span class="re0">$criticals</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>	
+		<span class="re0">$returnStr</span> = <span class="re0">$returnStr</span> . <span class="st0">&quot;item&quot;</span>;
+		<span class="kw1">if</span> <span class="br0">&#40;</span><span class="re0">$warnings</span> + <span class="re0">$criticals</span> &gt; <span class="nu0">1</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+			<span class="re0">$returnStr</span> = <span class="re0">$returnStr</span> . <span class="st0">&quot;s&quot;</span>;
+		<span class="br0">&#125;</span>
+		<span class="re0">$returnStr</span> = <span class="re0">$returnStr</span> . <span class="st0">&quot;:&quot;</span>;
+	<span class="br0">&#125;</span>
+	<span class="kw1">else</span> <span class="br0">&#123;</span> <span class="re0">$returnStr</span> = <span class="re0">$returnStr</span> . <span class="st0">&quot;Healthy&quot;</span>; <span class="br0">&#125;</span>
+&#160;
+	<span class="kw3">return</span> <span class="re0">$returnStr</span>;
+<span class="br0">&#125;</span>
+&#160;
+&#160;
+&#160;
+<span class="kw2">sub</span> alertschange <span class="br0">&#123;</span>
+	<span class="kw1">my</span> <span class="br0">&#40;</span><span class="re0">$newalerts</span><span class="br0">&#41;</span> = <span class="re0">@_</span>;
+	<span class="kw1">my</span> <span class="re0">$oldalerts</span>;
+	<span class="kw1">my</span> <span class="re0">$returnval</span> = <span class="nu0">0</span>;
+&#160;
+	<span class="co1"># first open the file for append - this is to ensure it exists</span>
+	<span class="kw3">open</span><span class="br0">&#40;</span> HANDLE, <span class="st0">&quot;&gt;&gt; &quot;</span>.<span class="re0">$STATUS_FILE</span><span class="br0">&#41;</span>;
+	<span class="kw3">close</span><span class="br0">&#40;</span> HANDLE <span class="br0">&#41;</span>;
+&#160;
+	<span class="co1"># now open the file for read, and read the line in</span>
+	<span class="kw3">open</span><span class="br0">&#40;</span> HANDLE, <span class="st0">&quot;&lt; &quot;</span>.<span class="re0">$STATUS_FILE</span><span class="br0">&#41;</span>;
+	<span class="re0">$oldalerts</span>=<span class="re4">&lt;HANDLE&gt;</span>;
+	<span class="kw3">close</span><span class="br0">&#40;</span> HANDLE <span class="br0">&#41;</span>;
+&#160;
+	<span class="kw1">unless</span> <span class="br0">&#40;</span><span class="re0">$oldalerts</span><span class="br0">&#41;</span> <span class="br0">&#123;</span> <span class="re0">$oldalerts</span> = <span class="nu0">0</span>; <span class="br0">&#125;</span>
+	<span class="kw3">chomp</span><span class="br0">&#40;</span><span class="re0">$oldalerts</span><span class="br0">&#41;</span>;
+&#160;
+	<span class="co1"># compare the value</span>
+	<span class="kw1">if</span> <span class="br0">&#40;</span><span class="re0">$oldalerts</span>!=<span class="re0">$newalerts</span><span class="br0">&#41;</span> <span class="br0">&#123;</span> <span class="re0">$returnval</span> = <span class="nu0">1</span>; <span class="br0">&#125;</span>
+&#160;
+	<span class="co1"># then replace the value in the file</span>
+	<span class="kw3">open</span><span class="br0">&#40;</span> HANDLE, <span class="st0">&quot;&gt; &quot;</span>.<span class="re0">$STATUS_FILE</span><span class="br0">&#41;</span>;
+	<span class="kw3">print</span> HANDLE <span class="re0">$newalerts</span>;
+	<span class="kw3">close</span><span class="br0">&#40;</span> HANDLE <span class="br0">&#41;</span>;
+&#160;
+	<span class="co1"># and return the result</span>
+	<span class="kw3">return</span> <span class="re0">$returnval</span>;
+<span class="br0">&#125;</span> <span class="co1"># end sub alertchange</span>
+&#160;
+&#160;
+&#160;
+<span class="kw2">sub</span> rep_color <span class="br0">&#123;</span>
+	<span class="kw1">my</span> <span class="re0">$inputStr</span> = <span class="kw3">uc</span><span class="br0">&#40;</span><span class="re0">$_</span><span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><span class="br0">&#41;</span>;
+	<span class="kw1">my</span> <span class="re0">$outputStr</span> = <span class="st0">'FireBrick'</span>;
+&#160;
+	<span class="kw1">if</span> <span class="br0">&#40;</span><span class="kw3">lc</span><span class="br0">&#40;</span><span class="re0">$inputStr</span><span class="br0">&#41;</span> eq <span class="st0">'green'</span><span class="br0">&#41;</span> <span class="br0">&#123;</span><span class="re0">$outputStr</span> = <span class="st0">'DarkGreen'</span><span class="br0">&#125;</span>
+	<span class="kw1">elsif</span> <span class="br0">&#40;</span><span class="kw3">lc</span><span class="br0">&#40;</span><span class="re0">$inputStr</span><span class="br0">&#41;</span> eq <span class="st0">'yellow'</span><span class="br0">&#41;</span> <span class="br0">&#123;</span><span class="re0">$outputStr</span> = <span class="st0">'DarkGoldenRod'</span><span class="br0">&#125;</span>
+&#160;
+	<span class="kw3">return</span> <span class="re0">$outputStr</span>;
+<span class="br0">&#125;</span>
+&#160;
+&#160;
+&#160;
+<span class="kw2">sub</span> check_use <span class="br0">&#123;</span>
+	<span class="kw1">my</span> <span class="re0">$use</span> = <span class="re0">$_</span><span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span>;
+	<span class="kw1">my</span> <span class="re0">$capacity</span> = <span class="re0">$_</span><span class="br0">&#91;</span><span class="nu0">1</span><span class="br0">&#93;</span>;
+	<span class="kw1">my</span> <span class="re0">$threshold</span> = <span class="re0">$_</span><span class="br0">&#91;</span><span class="nu0">2</span><span class="br0">&#93;</span>;
+&#160;
+	<span class="kw1">if</span> <span class="br0">&#40;</span><span class="re0">$use</span>*<span class="nu0">100</span>/<span class="re0">$capacity</span> &gt; <span class="re0">$threshold</span><span class="br0">&#41;</span> <span class="br0">&#123;</span><span class="kw3">return</span> <span class="st0">'Yellow'</span><span class="br0">&#125;</span>
+	<span class="kw1">else</span> <span class="br0">&#123;</span><span class="kw3">return</span> <span class="st0">'Green'</span><span class="br0">&#125;</span>
+&#160;
+<span class="br0">&#125;</span>
+&#160;
+&#160;
+&#160;
+<span class="kw2">sub</span> round <span class="br0">&#123;</span>
+    <span class="kw1">my</span><span class="br0">&#40;</span><span class="re0">$number</span><span class="br0">&#41;</span> = <span class="kw3">shift</span>;
+    <span class="kw3">return</span> <span class="kw3">int</span><span class="br0">&#40;</span><span class="re0">$number</span> + .<span class="nu0">5</span><span class="br0">&#41;</span>;
+<span class="br0">&#125;</span>
+&#160;
+&#160;
+&#160;
+<span class="kw2">sub</span> sendMail <span class="br0">&#123;</span>
+        <span class="kw1">my</span> <span class="re0">$alerts</span> = <span class="re0">$_</span><span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span>;
+        <span class="kw1">my</span> <span class="re0">$smtp</span> = Net::<span class="me2">SMTP</span>-&gt;<span class="me1">new</span><span class="br0">&#40;</span><span class="re0">$EMAIL_HOST</span> ,Hello =&gt; <span class="re0">$EMAIL_DOMAIN</span>, Timeout =&gt; <span class="nu0">30</span>,<span class="br0">&#41;</span>;
+&#160;
+        <span class="kw1">unless</span><span class="br0">&#40;</span><span class="re0">$smtp</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+		&amp;writelog<span class="br0">&#40;</span><span class="st0">&quot;ERROR: Unable to connect to email server $EMAIL_HOST.&quot;</span><span class="br0">&#41;</span>;
+                <span class="kw3">die</span> <span class="st0">&quot;Error: Unable to setup connection with email server: <span class="es0">\&quot;</span>&quot;</span> . <span class="re0">$EMAIL_HOST</span> . <span class="st0">&quot;<span class="es0">\&quot;</span>!<span class="es0">\n</span>&quot;</span>;
+        <span class="br0">&#125;</span>
+&#160;
+        <span class="re0">$smtp</span>-&gt;<span class="me1">mail</span><span class="br0">&#40;</span><span class="re0">$EMAIL_FROM</span><span class="br0">&#41;</span>;
+&#160;
+	<span class="kw1">my</span> <span class="re0">$primaryemail</span> = <span class="st0">''</span>;
+        <span class="kw1">my</span> <span class="re0">@maillist</span> = <span class="kw3">split</span><span class="br0">&#40;</span><span class="st0">';'</span>, <span class="re0">$EMAIL_TO</span><span class="br0">&#41;</span>;
+&#160;
+        <span class="kw1">foreach</span> <span class="br0">&#40;</span><span class="re0">@maillist</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>        
+        	<span class="re0">$smtp</span>-&gt;<span class="me1">to</span><span class="br0">&#40;</span><span class="re0">$_</span><span class="br0">&#41;</span>;
+        	<span class="kw1">unless</span> <span class="br0">&#40;</span><span class="re0">$primaryemail</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+        		<span class="re0">$primaryemail</span> = <span class="re0">$_</span>;
+        	<span class="br0">&#125;</span>
+	<span class="br0">&#125;</span>
+&#160;
+        <span class="re0">$smtp</span>-&gt;<span class="me1">data</span><span class="br0">&#40;</span><span class="br0">&#41;</span>;
+        <span class="re0">$smtp</span>-&gt;<span class="me1">datasend</span><span class="br0">&#40;</span><span class="st0">'From: '</span>.<span class="re0">$EMAIL_FROM</span>.<span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="br0">&#41;</span>;
+        <span class="re0">$smtp</span>-&gt;<span class="me1">datasend</span><span class="br0">&#40;</span><span class="st0">'To: '</span>.<span class="re0">$primaryemail</span>.<span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="br0">&#41;</span>;
+        <span class="kw1">if</span> <span class="br0">&#40;</span><span class="re0">$alerts</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+        	<span class="re0">$smtp</span>-&gt;<span class="me1">datasend</span><span class="br0">&#40;</span><span class="st0">'Subject: '</span>.<span class="re0">$EMAIL_SUBJECT_ALERTS</span>.<span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="br0">&#41;</span>;
+        <span class="br0">&#125;</span> <span class="kw1">else</span> <span class="br0">&#123;</span>
+        	<span class="re0">$smtp</span>-&gt;<span class="me1">datasend</span><span class="br0">&#40;</span><span class="st0">'Subject: '</span>.<span class="re0">$EMAIL_SUBJECT_NORMAL</span>.<span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="br0">&#41;</span>;      
+        <span class="br0">&#125;</span>
+   	<span class="re0">$smtp</span>-&gt;<span class="me1">datasend</span><span class="br0">&#40;</span><span class="st0">&quot;MIME-Version: 1.0<span class="es0">\n</span>&quot;</span><span class="br0">&#41;</span>;
+   	<span class="re0">$smtp</span>-&gt;<span class="me1">datasend</span><span class="br0">&#40;</span><span class="st0">&quot;Content-Type: text/html; charset=us-ascii<span class="es0">\n</span>&quot;</span><span class="br0">&#41;</span>;
+   	<span class="re0">$smtp</span>-&gt;<span class="me1">datasend</span><span class="br0">&#40;</span><span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="br0">&#41;</span>;
+&#160;
+        <span class="kw3">open</span> <span class="br0">&#40;</span>HANDLE, <span class="re0">$reportname</span><span class="br0">&#41;</span> <span class="kw1">or</span>
+		&amp;writelog<span class="br0">&#40;</span><span class="st0">&quot;ERROR: Email not sent - unable to open report file $reportname.&quot;</span><span class="br0">&#41;</span>,
+		<span class="kw3">die</span><span class="br0">&#40;</span><span class="st0">&quot;ERROR: Can not locate report file <span class="es0">\&quot;</span>$reportname<span class="es0">\&quot;</span>!<span class="es0">\n</span>&quot;</span><span class="br0">&#41;</span>;
+&#160;
+        <span class="kw1">my</span> <span class="re0">@lines</span> = <span class="re4">&lt;HANDLE&gt;</span>;
+        <span class="kw3">close</span><span class="br0">&#40;</span>HANDLE<span class="br0">&#41;</span>;
+        <span class="kw1">foreach</span> <span class="kw1">my</span> <span class="re0">$line</span> <span class="br0">&#40;</span><span class="re0">@lines</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+                <span class="re0">$smtp</span>-&gt;<span class="me1">datasend</span><span class="br0">&#40;</span><span class="re0">$line</span><span class="br0">&#41;</span>;
+        <span class="br0">&#125;</span>
+&#160;
+	<span class="kw3">eval</span> <span class="br0">&#123;</span>
+	        <span class="re0">$smtp</span>-&gt;<span class="me1">dataend</span><span class="br0">&#40;</span><span class="br0">&#41;</span>;
+        	<span class="re0">$smtp</span>-&gt;<span class="me1">quit</span>;
+	<span class="br0">&#125;</span>;
+	<span class="kw1">if</span><span class="br0">&#40;</span>$@<span class="br0">&#41;</span> <span class="br0">&#123;</span>
+		&amp;writelog<span class="br0">&#40;</span><span class="st0">&quot;ERROR: Unable to send email via $EMAIL_HOST.&quot;</span><span class="br0">&#41;</span>;
+		<span class="kw3">die</span> <span class="st0">&quot;Error: Unable to send report <span class="es0">\&quot;</span>$reportname<span class="es0">\&quot;</span>!<span class="es0">\n</span>&quot;</span>;
+	<span class="br0">&#125;</span> <span class="kw1">else</span> <span class="br0">&#123;</span>
+		&amp;writelog<span class="br0">&#40;</span><span class="st0">&quot;Email sent &quot;</span>.&amp;giveMeDate<span class="br0">&#40;</span><span class="st0">'DMY'</span><span class="br0">&#41;</span>.<span class="st0">&quot; at &quot;</span>.&amp;giveMeDate<span class="br0">&#40;</span><span class="st0">'HMS'</span><span class="br0">&#41;</span>.<span class="st0">&quot; to $primaryemail.&quot;</span><span class="br0">&#41;</span>;
+	        <span class="co1">#`del $reportname`;</span>
+	<span class="br0">&#125;</span>
+<span class="br0">&#125;</span>
+&#160;
+&#160;
+&#160;
+<span class="co1"># Subroutine to process the input file</span>
+<span class="kw2">sub</span> processFile <span class="br0">&#123;</span>
+        <span class="kw1">my</span> <span class="br0">&#40;</span><span class="re0">$vmlist</span><span class="br0">&#41;</span> =  <span class="re0">@_</span>;
+        <span class="kw1">my</span> <span class="re0">$HANDLE</span>;
+        <span class="kw3">open</span> <span class="br0">&#40;</span>HANDLE, <span class="re0">$vmlist</span><span class="br0">&#41;</span> <span class="kw1">or</span>
+		&amp;writelog<span class="br0">&#40;</span><span class="st0">&quot;ERROR: Cannot locate $vmlist input file.&quot;</span><span class="br0">&#41;</span>,
+		<span class="kw3">die</span><span class="br0">&#40;</span><span class="st0">&quot;ERROR: Cannot locate <span class="es0">\&quot;</span>$vmlist<span class="es0">\&quot;</span> input file!<span class="es0">\n</span>&quot;</span><span class="br0">&#41;</span>;
+&#160;
+        <span class="kw1">my</span> <span class="re0">@lines</span> = <span class="re4">&lt;HANDLE&gt;</span>;
+        <span class="kw1">my</span> <span class="re0">@errorArray</span>;
+        <span class="kw1">my</span> <span class="re0">$line_no</span> = <span class="nu0">0</span>;
+&#160;
+        <span class="kw3">close</span><span class="br0">&#40;</span>HANDLE<span class="br0">&#41;</span>;
+        <span class="kw1">foreach</span> <span class="kw1">my</span> <span class="re0">$line</span> <span class="br0">&#40;</span><span class="re0">@lines</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+                <span class="re0">$line_no</span>++;
+                &amp;TrimSpaces<span class="br0">&#40;</span><span class="re0">$line</span><span class="br0">&#41;</span>;
+&#160;
+                <span class="kw1">if</span><span class="br0">&#40;</span><span class="re0">$line</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+                        <span class="kw1">if</span><span class="br0">&#40;</span><span class="re0">$line</span> =~ /^\<span class="kw3">s</span>*:|:\<span class="kw3">s</span>*$/<span class="br0">&#41;</span><span class="br0">&#123;</span>
+                                <span class="kw3">print</span> <span class="st0">&quot;Error in Parsing File at line: $line_no<span class="es0">\n</span>&quot;</span>;
+                                <span class="kw3">print</span> <span class="st0">&quot;Continuing to the next line<span class="es0">\n</span>&quot;</span>;
+				&amp;writelog<span class="br0">&#40;</span><span class="st0">&quot;WARNING: Ignored lines in host list.&quot;</span><span class="br0">&#41;</span>;
+                                <span class="kw1">next</span>;
+                        <span class="br0">&#125;</span>
+                        <span class="kw1">my</span> <span class="re0">$host</span> = <span class="re0">$line</span>;
+                        &amp;TrimSpaces<span class="br0">&#40;</span><span class="re0">$host</span><span class="br0">&#41;</span>;
+                        <span class="kw3">push</span> <span class="re0">@host_list</span>,<span class="re0">$host</span>;
+                <span class="br0">&#125;</span>
+        <span class="br0">&#125;</span>
+<span class="br0">&#125;</span>
+&#160;
+&#160;
+&#160;
+<span class="kw2">sub</span> TrimSpaces <span class="br0">&#123;</span>
+        <span class="kw1">foreach</span> <span class="br0">&#40;</span><span class="re0">@_</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+                <span class="kw3">s</span>/^\<span class="kw3">s</span>+|\<span class="kw3">s</span>*$//g
+        <span class="br0">&#125;</span>
+<span class="br0">&#125;</span>
+&#160;
+&#160;
+&#160;
+<span class="kw2">sub</span> startReportCreation <span class="br0">&#123;</span>
+	<span class="kw3">print</span> <span class="st0">&quot;Generating $report_name <span class="es0">\&quot;</span>$reportname<span class="es0">\&quot;</span> .<span class="es0">\n</span>&quot;</span>;
+	<span class="kw3">open</span><span class="br0">&#40;</span>REPORT_OUTPUT, <span class="st0">&quot;&gt;$reportname&quot;</span><span class="br0">&#41;</span>;
+&#160;
+	<span class="kw1">my</span> <span class="re0">$date</span> = giveMeDate<span class="br0">&#40;</span><span class="st0">'DMY'</span><span class="br0">&#41;</span>;
+	<span class="kw1">my</span> <span class="re0">$time</span> = giveMeDate<span class="br0">&#40;</span><span class="st0">'HMS'</span><span class="br0">&#41;</span>;
+	<span class="kw1">my</span> <span class="re0">$html_start</span> = &lt;&lt;HTML_START;
+<span class="re4">&lt;html&gt;</span>
+&#160;
+<span class="re4">&lt;head&gt;</span>
+&#160;
+<span class="re4">&lt;style&gt;</span>
+&lt;!--
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	<span class="br0">&#123;</span>margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:<span class="nu0">10</span>.0pt;
+	margin-left:0cm;
+	line-height:<span class="nu0">115</span>%;
+	font-size:<span class="nu0">10</span>.0pt;
+	font-family:<span class="st0">&quot;Calibri&quot;</span>,<span class="st0">&quot;sans-serif&quot;</span>;<span class="br0">&#125;</span>
+h1
+	<span class="br0">&#123;</span>mso-style-<span class="kw3">link</span>:<span class="st0">&quot;Heading 1 Char&quot;</span>;
+	margin-top:<span class="nu0">24</span>.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	line-height:<span class="nu0">115</span>%;
+	page-break-after:avoid;
+	font-size:<span class="nu0">14</span>.0pt;
+	font-family:<span class="st0">&quot;Cambria&quot;</span>,<span class="st0">&quot;serif&quot;</span>;
+	color:<span class="co1">#365F91;</span>
+	font-weight:bold;<span class="br0">&#125;</span>
+h2
+	<span class="br0">&#123;</span>mso-style-<span class="kw3">link</span>:<span class="st0">&quot;Heading 2 Char&quot;</span>;
+	margin-top:<span class="nu0">10</span>.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	line-height:<span class="nu0">115</span>%;
+	page-break-after:avoid;
+	font-size:<span class="nu0">13</span>.0pt;
+	font-family:<span class="st0">&quot;Cambria&quot;</span>,<span class="st0">&quot;serif&quot;</span>;
+	color:<span class="co1">#4F81BD;</span>
+	font-weight:bold;<span class="br0">&#125;</span>
+h3
+	<span class="br0">&#123;</span>mso-style-<span class="kw3">link</span>:<span class="st0">&quot;Heading 3 Char&quot;</span>;
+	margin-top:<span class="nu0">10</span>.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	line-height:<span class="nu0">115</span>%;
+	page-break-after:avoid;
+	font-size:<span class="nu0">11</span>.0pt;
+	font-family:<span class="st0">&quot;Cambria&quot;</span>,<span class="st0">&quot;serif&quot;</span>;
+	color:<span class="co1">#4F81BD;</span>
+	font-weight:bold;<span class="br0">&#125;</span>
+h4
+	<span class="br0">&#123;</span>mso-style-<span class="kw3">link</span>:<span class="st0">&quot;Heading 4 Char&quot;</span>;
+	margin-top:<span class="nu0">10</span>.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	line-height:<span class="nu0">115</span>%;
+	page-break-after:avoid;
+	font-size:<span class="nu0">11</span>.0pt;
+	font-family:<span class="st0">&quot;Cambria&quot;</span>,<span class="st0">&quot;serif&quot;</span>;
+	color:<span class="co1">#4F81BD;</span>
+	font-weight:bold;
+	font-style:italic;<span class="br0">&#125;</span>
+p.MsoTitle, li.MsoTitle, div.MsoTitle
+	<span class="br0">&#123;</span>mso-style-<span class="kw3">link</span>:<span class="st0">&quot;Title Char&quot;</span>;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:<span class="nu0">15</span>.0pt;
+	margin-left:0cm;
+	border:none;
+	padding:0cm;
+	font-size:<span class="nu0">26</span>.0pt;
+	font-family:<span class="st0">&quot;Cambria&quot;</span>,<span class="st0">&quot;serif&quot;</span>;
+	color:<span class="co1">#17365D;</span>
+	letter-spacing:.25pt;<span class="br0">&#125;</span>
+p.MsoTitleCxSpFirst, li.MsoTitleCxSpFirst, div.MsoTitleCxSpFirst
+	<span class="br0">&#123;</span>mso-style-<span class="kw3">link</span>:<span class="st0">&quot;Title Char&quot;</span>;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	border:none;
+	padding:0cm;
+	font-size:<span class="nu0">26</span>.0pt;
+	font-family:<span class="st0">&quot;Cambria&quot;</span>,<span class="st0">&quot;serif&quot;</span>;
+	color:<span class="co1">#17365D;</span>
+	letter-spacing:.25pt;<span class="br0">&#125;</span>
+p.MsoTitleCxSpMiddle, li.MsoTitleCxSpMiddle, div.MsoTitleCxSpMiddle
+	<span class="br0">&#123;</span>mso-style-<span class="kw3">link</span>:<span class="st0">&quot;Title Char&quot;</span>;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	border:none;
+	padding:0cm;
+	font-size:<span class="nu0">26</span>.0pt;
+	font-family:<span class="st0">&quot;Cambria&quot;</span>,<span class="st0">&quot;serif&quot;</span>;
+	color:<span class="co1">#17365D;</span>
+	letter-spacing:.25pt;<span class="br0">&#125;</span>
+p.MsoTitleCxSpLast, li.MsoTitleCxSpLast, div.MsoTitleCxSpLast
+	<span class="br0">&#123;</span>mso-style-<span class="kw3">link</span>:<span class="st0">&quot;Title Char&quot;</span>;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:<span class="nu0">15</span>.0pt;
+	margin-left:0cm;
+	border:none;
+	padding:0cm;
+	font-size:<span class="nu0">26</span>.0pt;
+	font-family:<span class="st0">&quot;Cambria&quot;</span>,<span class="st0">&quot;serif&quot;</span>;
+	color:<span class="co1">#17365D;</span>
+	letter-spacing:.25pt;<span class="br0">&#125;</span>
+p.MsoSubtitle, li.MsoSubtitle, div.MsoSubtitle
+	<span class="br0">&#123;</span>mso-style-<span class="kw3">link</span>:<span class="st0">&quot;Subtitle Char&quot;</span>;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:<span class="nu0">10</span>.0pt;
+	margin-left:0cm;
+	line-height:<span class="nu0">115</span>%;
+	font-size:<span class="nu0">12</span>.0pt;
+	font-family:<span class="st0">&quot;Cambria&quot;</span>,<span class="st0">&quot;serif&quot;</span>;
+	color:<span class="co1">#4F81BD;</span>
+	letter-spacing:.75pt;
+	font-style:italic;<span class="br0">&#125;</span>
+p
+	<span class="br0">&#123;</span>margin-right:0cm;
+	margin-left:0cm;
+	font-size:<span class="nu0">12</span>.0pt;
+	font-family:<span class="st0">&quot;Times New Roman&quot;</span>,<span class="st0">&quot;serif&quot;</span>;<span class="br0">&#125;</span>
+p.MsoNoSpacing, li.MsoNoSpacing, div.MsoNoSpacing
+	<span class="br0">&#123;</span>margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:<span class="nu0">11</span>.0pt;
+	font-family:<span class="st0">&quot;Calibri&quot;</span>,<span class="st0">&quot;sans-serif&quot;</span>;<span class="br0">&#125;</span>
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	<span class="br0">&#123;</span>margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:<span class="nu0">10</span>.0pt;
+	margin-left:<span class="nu0">36</span>.0pt;
+	line-height:<span class="nu0">115</span>%;
+	font-size:<span class="nu0">11</span>.0pt;
+	font-family:<span class="st0">&quot;Calibri&quot;</span>,<span class="st0">&quot;sans-serif&quot;</span>;<span class="br0">&#125;</span>
+p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParagraphCxSpFirst
+	<span class="br0">&#123;</span>margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:<span class="nu0">36</span>.0pt;
+	margin-bottom:.0001pt;
+	line-height:<span class="nu0">115</span>%;
+	font-size:<span class="nu0">11</span>.0pt;
+	font-family:<span class="st0">&quot;Calibri&quot;</span>,<span class="st0">&quot;sans-serif&quot;</span>;<span class="br0">&#125;</span>
+p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListParagraphCxSpMiddle
+	<span class="br0">&#123;</span>margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:<span class="nu0">36</span>.0pt;
+	margin-bottom:.0001pt;
+	line-height:<span class="nu0">115</span>%;
+	font-size:<span class="nu0">11</span>.0pt;
+	font-family:<span class="st0">&quot;Calibri&quot;</span>,<span class="st0">&quot;sans-serif&quot;</span>;<span class="br0">&#125;</span>
+p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxSpLast
+	<span class="br0">&#123;</span>margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:<span class="nu0">10</span>.0pt;
+	margin-left:<span class="nu0">36</span>.0pt;
+	line-height:<span class="nu0">115</span>%;
+	font-size:<span class="nu0">11</span>.0pt;
+	font-family:<span class="st0">&quot;Calibri&quot;</span>,<span class="st0">&quot;sans-serif&quot;</span>;<span class="br0">&#125;</span>
+span.MsoSubtleEmphasis
+	<span class="br0">&#123;</span>color:gray;
+	font-style:italic;<span class="br0">&#125;</span>
+span.MsoIntenseEmphasis
+	<span class="br0">&#123;</span>color:<span class="co1">#4F81BD;</span>
+	font-weight:bold;
+	font-style:italic;<span class="br0">&#125;</span>
+span.Heading1Char
+	<span class="br0">&#123;</span>mso-style-name:<span class="st0">&quot;Heading 1 Char&quot;</span>;
+	mso-style-<span class="kw3">link</span>:<span class="st0">&quot;Heading 1&quot;</span>;
+	font-family:<span class="st0">&quot;Cambria&quot;</span>,<span class="st0">&quot;serif&quot;</span>;
+	color:<span class="co1">#365F91;</span>
+	font-weight:bold;<span class="br0">&#125;</span>
+span.Heading2Char
+	<span class="br0">&#123;</span>mso-style-name:<span class="st0">&quot;Heading 2 Char&quot;</span>;
+	mso-style-<span class="kw3">link</span>:<span class="st0">&quot;Heading 2&quot;</span>;
+	font-family:<span class="st0">&quot;Cambria&quot;</span>,<span class="st0">&quot;serif&quot;</span>;
+	color:<span class="co1">#4F81BD;</span>
+	font-weight:bold;<span class="br0">&#125;</span>
+span.Heading3Char
+	<span class="br0">&#123;</span>mso-style-name:<span class="st0">&quot;Heading 3 Char&quot;</span>;
+	mso-style-<span class="kw3">link</span>:<span class="st0">&quot;Heading 3&quot;</span>;
+	font-family:<span class="st0">&quot;Cambria&quot;</span>,<span class="st0">&quot;serif&quot;</span>;
+	color:<span class="co1">#4F81BD;</span>
+	font-weight:bold;<span class="br0">&#125;</span>
+span.Heading4Char
+	<span class="br0">&#123;</span>mso-style-name:<span class="st0">&quot;Heading 4 Char&quot;</span>;
+	mso-style-<span class="kw3">link</span>:<span class="st0">&quot;Heading 4&quot;</span>;
+	font-family:<span class="st0">&quot;Cambria&quot;</span>,<span class="st0">&quot;serif&quot;</span>;
+	color:<span class="co1">#4F81BD;</span>
+	font-weight:bold;
+	font-style:italic;<span class="br0">&#125;</span>
+span.TitleChar
+	<span class="br0">&#123;</span>mso-style-name:<span class="st0">&quot;Title Char&quot;</span>;
+	mso-style-<span class="kw3">link</span>:Title;
+	font-family:<span class="st0">&quot;Cambria&quot;</span>,<span class="st0">&quot;serif&quot;</span>;
+	color:<span class="co1">#17365D;</span>
+	letter-spacing:.25pt;<span class="br0">&#125;</span>
+span.SubtitleChar
+	<span class="br0">&#123;</span>mso-style-name:<span class="st0">&quot;Subtitle Char&quot;</span>;
+	mso-style-<span class="kw3">link</span>:Subtitle;
+	font-family:<span class="st0">&quot;Cambria&quot;</span>,<span class="st0">&quot;serif&quot;</span>;
+	color:<span class="co1">#4F81BD;</span>
+	letter-spacing:.75pt;
+	font-style:italic;<span class="br0">&#125;</span>
+.MsoChpDefault
+	<span class="br0">&#123;</span>font-size:<span class="nu0">10</span>.0pt;<span class="br0">&#125;</span>
+div.Section1
+	<span class="br0">&#123;</span>page:Section1;<span class="br0">&#125;</span>
+ /* List Definitions */
+ ol
+	<span class="br0">&#123;</span>margin-bottom:0cm;<span class="br0">&#125;</span>
+ul
+	<span class="br0">&#123;</span>margin-bottom:0cm;<span class="br0">&#125;</span>
+--&gt;
+&lt;/style&gt;
+&#160;
+&lt;/head&gt;
+&#160;
+&lt;body lang=EN-GB&gt;
+&#160;
+&lt;div class=Section1&gt;
+&#160;
+<span class="re4">&lt;h1&gt;</span>vm&lt;span style=<span class="st0">'font-weight:normal'</span>&gt;ware Host Hardware Health Report&lt;/span&gt; &lt;/h1&gt;
+&#160;
+&lt;p class=MsoNormal&gt;Metrics gathered <span class="re0">$date</span> at <span class="re0">$time</span>&lt;/p&gt;
+&#160;
+&lt;div style=<span class="st0">'border:none;border-top:solid windowtext 1.0pt;padding:1.0pt 0cm 0cm 0cm'</span>&gt;
+&#160;
+HTML_START
+&#160;
+	<span class="kw3">print</span> REPORT_OUTPUT <span class="re0">$html_start</span>;
+<span class="br0">&#125;</span>
+&#160;
+&#160;
+&#160;
+<span class="kw2">sub</span> endReportCreation <span class="br0">&#123;</span>
+	<span class="kw1">my</span> <span class="re0">$html_end</span> = &lt;&lt;HTML_END;
+&lt;p class=MsoNormal&gt;&amp;nbsp;&lt;/p&gt;
+&#160;
+&lt;p class=MsoNormal&gt;End of Report.&lt;/p&gt;
+&#160;
+&lt;/div&gt;
+&#160;
+&lt;/body&gt;
+&#160;
+&lt;/html&gt;
+&#160;
+HTML_END
+	<span class="kw3">print</span> REPORT_OUTPUT <span class="re0">$html_end</span>;
+	<span class="kw3">close</span><span class="br0">&#40;</span>REPORT_OUTPUT<span class="br0">&#41;</span>;
+<span class="br0">&#125;</span>
+&#160;
+&#160;
+&#160;
+<span class="kw2">sub</span> newBullet <span class="br0">&#123;</span>
+<span class="co1"># Returns the text as an HTML formatted bullet of the specified colour</span>
+        <span class="kw1">my</span> <span class="br0">&#40;</span><span class="re0">$sensor</span>,<span class="re0">$sensorColor</span><span class="br0">&#41;</span> = <span class="re0">@_</span>;
+	<span class="kw1">my</span> <span class="re0">$bulletCode</span>;
+&#160;
+	<span class="re0">$bulletCode</span> =  <span class="st0">&quot;&lt;p class=MsoListParagraphCxSpMiddle style='margin-left:72.0pt;text-indent:-18.0pt;<span class="es0">\n</span>&quot;</span>;
+	<span class="re0">$bulletCode</span> .= <span class="st0">&quot;line-height:normal'&gt;&lt;span style='font-size:9.0pt;font-family:<span class="es0">\&quot;</span>Courier New<span class="es0">\&quot;</span>;<span class="es0">\n</span>&quot;</span>;
+	<span class="re0">$bulletCode</span> .= <span class="st0">&quot;color:$sensorColor'&gt;o&lt;span style='font:7.0pt <span class="es0">\&quot;</span>Times New Roman<span class="es0">\&quot;</span>'&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="es0">\n</span>&quot;</span>;
+	<span class="re0">$bulletCode</span> .= <span class="st0">&quot;&lt;/span&gt;&lt;/span&gt;&lt;span style='font-size:9.0pt;color:$sensorColor'&gt;<span class="es0">\n</span>&quot;</span>;
+	<span class="re0">$bulletCode</span> .= <span class="st0">&quot;$sensor&lt;/span&gt;&lt;/p&gt;<span class="es0">\n</span>&quot;</span>;
+&#160;
+	<span class="kw3">return</span> <span class="re0">$bulletCode</span>;
+<span class="br0">&#125;</span>
+&#160;
+&#160;
+&#160;
+<span class="kw2">sub</span> htmlHeading <span class="br0">&#123;</span>
+<span class="co1"># Returns the text as an HTML formatted heading</span>
+	<span class="kw1">my</span> <span class="re0">$headingCode</span>;
+&#160;
+	<span class="re0">$headingCode</span> =  <span class="st0">&quot;&lt;p class=MsoListParagraphCxSpFirst style='text-indent:-18.0pt;line-height:normal'&gt;&lt;span<span class="es0">\n</span>&quot;</span>;
+	<span class="re0">$headingCode</span> .= <span class="st0">&quot;style='font-size:9.0pt;font-family:Symbol'&gt;·&lt;span style='font:7.0pt <span class="es0">\&quot;</span>Times New Roman<span class="es0">\&quot;</span>'&gt;&quot;</span>;
+	<span class="re0">$headingCode</span> .= <span class="st0">&quot;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="es0">\n</span>&quot;</span>;
+	<span class="re0">$headingCode</span> .= <span class="st0">&quot;&lt;/span&gt;&lt;/span&gt;&lt;b&gt;&lt;span style='font-size:9.0pt'&gt;@_&lt;/span&gt;&lt;/b&gt;&lt;/p&gt;<span class="es0">\n</span>&quot;</span>;
+&#160;
+	<span class="kw3">return</span> <span class="re0">$headingCode</span>;
+<span class="br0">&#125;</span>
+&#160;
+&#160;
+&#160;
+<span class="kw2">sub</span> writelog <span class="br0">&#123;</span>
+<span class="co1"># Appends specified text to the log file</span>
+	<span class="kw3">open</span> <span class="br0">&#40;</span>LOGFILE, <span class="st0">&quot;&gt;&gt;$LOG_FILE&quot;</span><span class="br0">&#41;</span>;
+	<span class="kw3">print</span> LOGFILE <span class="st0">&quot;@_<span class="es0">\n</span>&quot;</span>;
+	<span class="kw3">close</span> <span class="br0">&#40;</span>LOGFILE<span class="br0">&#41;</span>; 
+<span class="br0">&#125;</span>
+&#160;
+&#160;
+&#160;
+<span class="kw2">sub</span> giveMeDate <span class="br0">&#123;</span>
+        <span class="kw1">my</span> <span class="br0">&#40;</span><span class="re0">$date_format</span><span class="br0">&#41;</span> = <span class="re0">@_</span>;
+        <span class="kw1">my</span> <span class="re0">%dttime</span> = <span class="br0">&#40;</span><span class="br0">&#41;</span>;
+	<span class="kw1">my</span> <span class="re0">$my_time</span>;
+        <span class="kw1">my</span> <span class="br0">&#40;</span><span class="re0">$sec</span>,<span class="re0">$min</span>,<span class="re0">$hour</span>,<span class="re0">$mday</span>,<span class="re0">$mon</span>,<span class="re0">$year</span>,<span class="re0">$wday</span>,<span class="re0">$yday</span>,<span class="re0">$isdst</span><span class="br0">&#41;</span> = <span class="kw3">localtime</span><span class="br0">&#40;</span><span class="kw3">time</span><span class="br0">&#41;</span>;
+&#160;
+        <span class="co1">### begin_: initialize DateTime number formats</span>
+        <span class="re0">$dttime</span><span class="br0">&#123;</span>year <span class="br0">&#125;</span>  = <span class="kw3">sprintf</span> <span class="st0">&quot;%04d&quot;</span>,<span class="br0">&#40;</span><span class="re0">$year</span> + <span class="nu0">1900</span><span class="br0">&#41;</span>;  <span class="co1">## four digits to specify the year</span>
+        <span class="re0">$dttime</span><span class="br0">&#123;</span>mon  <span class="br0">&#125;</span>  = <span class="kw3">sprintf</span> <span class="st0">&quot;%02d&quot;</span>,<span class="br0">&#40;</span><span class="re0">$mon</span> + <span class="nu0">1</span><span class="br0">&#41;</span>;      <span class="co1">## zeropad months</span>
+        <span class="re0">$dttime</span><span class="br0">&#123;</span>mday <span class="br0">&#125;</span>  = <span class="kw3">sprintf</span> <span class="st0">&quot;%02d&quot;</span>,<span class="re0">$mday</span>;           <span class="co1">## zeropad day of the month</span>
+        <span class="re0">$dttime</span><span class="br0">&#123;</span>wday <span class="br0">&#125;</span>  = <span class="kw3">sprintf</span> <span class="st0">&quot;%02d&quot;</span>,<span class="re0">$wday</span> + <span class="nu0">1</span>;       <span class="co1">## zeropad day of week; sunday = 1;</span>
+        <span class="re0">$dttime</span><span class="br0">&#123;</span>yday <span class="br0">&#125;</span>  = <span class="kw3">sprintf</span> <span class="st0">&quot;%02d&quot;</span>,<span class="re0">$yday</span>;           <span class="co1">## zeropad nth day of the year</span>
+        <span class="re0">$dttime</span><span class="br0">&#123;</span>hour <span class="br0">&#125;</span>  = <span class="kw3">sprintf</span> <span class="st0">&quot;%02d&quot;</span>,<span class="re0">$hour</span>;           <span class="co1">## zeropad hour</span>
+        <span class="re0">$dttime</span><span class="br0">&#123;</span>min  <span class="br0">&#125;</span>  = <span class="kw3">sprintf</span> <span class="st0">&quot;%02d&quot;</span>,<span class="re0">$min</span>;            <span class="co1">## zeropad minutes</span>
+        <span class="re0">$dttime</span><span class="br0">&#123;</span>sec  <span class="br0">&#125;</span>  = <span class="kw3">sprintf</span> <span class="st0">&quot;%02d&quot;</span>,<span class="re0">$sec</span>;            <span class="co1">## zeropad seconds</span>
+        <span class="re0">$dttime</span><span class="br0">&#123;</span>isdst<span class="br0">&#125;</span>  = <span class="re0">$isdst</span>;
+&#160;
+        <span class="kw1">if</span><span class="br0">&#40;</span><span class="re0">$date_format</span> eq <span class="st0">'MDYHMS'</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+                <span class="re0">$my_time</span> = <span class="st0">&quot;$dttime{mon}-$dttime{mday}-$dttime{year} $dttime{hour}:$dttime{min}:$dttime{sec}&quot;</span>;
+        <span class="br0">&#125;</span>
+        <span class="kw1">elsif</span> <span class="br0">&#40;</span><span class="re0">$date_format</span> eq <span class="st0">'YMD'</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+                <span class="re0">$my_time</span> = <span class="st0">&quot;$dttime{year}-$dttime{mon}-$dttime{mday}&quot;</span>;
+        <span class="br0">&#125;</span>
+        <span class="kw1">elsif</span> <span class="br0">&#40;</span><span class="re0">$date_format</span> eq <span class="st0">'DMY'</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+                <span class="re0">$my_time</span> = <span class="st0">&quot;$dttime{mday}-$dttime{mon}-$dttime{year}&quot;</span>;
+        <span class="br0">&#125;</span>
+        <span class="kw1">elsif</span> <span class="br0">&#40;</span><span class="re0">$date_format</span> eq <span class="st0">'HMS'</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+                <span class="re0">$my_time</span> = <span class="st0">&quot;$dttime{hour}:$dttime{min}:$dttime{sec}&quot;</span>;
+        <span class="br0">&#125;</span>
+        <span class="kw3">return</span> <span class="re0">$my_time</span>;
+<span class="br0">&#125;</span>
+&#160;
+&#160;
+&#160;
+<span class="kw2">sub</span> validateConnection <span class="br0">&#123;</span>
+        <span class="kw1">my</span> <span class="br0">&#40;</span><span class="re0">$host_version</span>,<span class="re0">$host_license</span>,<span class="re0">$host_type</span><span class="br0">&#41;</span> = <span class="re0">@_</span>;
+        <span class="kw1">my</span> <span class="re0">$service_content</span> = Vim::<span class="me2">get_service_content</span><span class="br0">&#40;</span><span class="br0">&#41;</span>;
+        <span class="kw1">my</span> <span class="re0">$licMgr</span> = Vim::<span class="me2">get_view</span><span class="br0">&#40;</span>mo_ref =&gt; <span class="re0">$service_content</span>-&gt;<span class="me1">licenseManager</span><span class="br0">&#41;</span>;
+&#160;
+        <span class="co1">########################</span>
+        <span class="co1"># CHECK HOST VERSION</span>
+        <span class="co1">########################</span>
+        <span class="kw1">if</span><span class="br0">&#40;</span>!<span class="re0">$service_content</span>-&gt;<span class="me1">about</span>-&gt;<span class="me1">version</span> ge <span class="re0">$host_version</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+                Util::<span class="me2">disconnect</span><span class="br0">&#40;</span><span class="br0">&#41;</span>;
+                <span class="kw3">print</span> <span class="st0">&quot;This script requires your ESX(i) host to be greater than $host_version<span class="es0">\n</span><span class="es0">\n</span>&quot;</span>;
+                <span class="kw3">exit</span> <span class="nu0">1</span>;
+        <span class="br0">&#125;</span>
+&#160;
+        <span class="co1">########################</span>
+        <span class="co1"># CHECK HOST LICENSE</span>
+        <span class="co1">########################</span>
+        <span class="kw1">my</span> <span class="re0">$licenses</span> = <span class="re0">$licMgr</span>-&gt;<span class="me1">licenses</span>;
+        <span class="kw1">foreach</span><span class="br0">&#40;</span><span class="re0">@$licenses</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+                <span class="kw1">if</span><span class="br0">&#40;</span><span class="re0">$_</span>-&gt;<span class="me1">editionKey</span> eq <span class="st0">'esxBasic'</span> &amp;&amp; <span class="re0">$host_license</span> eq <span class="st0">'licensed'</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+                        Util::<span class="me2">disconnect</span><span class="br0">&#40;</span><span class="br0">&#41;</span>;
+                        <span class="kw3">print</span> <span class="st0">&quot;This script requires your ESX(i) be licensed, the free version will not allow you to perform any write operations!<span class="es0">\n</span><span class="es0">\n</span>&quot;</span>;
+                        <span class="kw3">exit</span> <span class="nu0">1</span>;
+                <span class="br0">&#125;</span>
+        <span class="br0">&#125;</span>
+&#160;
+        <span class="co1">########################</span>
+        <span class="co1"># CHECK HOST TYPE</span>
+        <span class="co1">########################</span>
+        <span class="kw1">if</span><span class="br0">&#40;</span><span class="re0">$service_content</span>-&gt;<span class="me1">about</span>-&gt;<span class="me1">apiType</span> <span class="kw1">ne</span> <span class="re0">$host_type</span> &amp;&amp; <span class="re0">$host_type</span> <span class="kw1">ne</span> <span class="st0">'both'</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+                Util::<span class="me2">disconnect</span><span class="br0">&#40;</span><span class="br0">&#41;</span>;
+                <span class="kw3">print</span> <span class="st0">&quot;This script needs to be executed against $host_type<span class="es0">\n</span><span class="es0">\n</span>&quot;</span>;
+                <span class="kw3">exit</span> <span class="nu0">1</span>
+        <span class="br0">&#125;</span>
+&#160;
+        <span class="kw3">return</span> <span class="re0">$service_content</span>-&gt;<span class="me1">about</span>-&gt;<span class="me1">apiType</span>;
+<span class="br0">&#125;</span>
+&#160;
+&#160;
+<span class="kw2">sub</span> commify <span class="br0">&#123;</span>
+    <span class="kw3">local</span><span class="br0">&#40;</span><span class="re0">$_</span><span class="br0">&#41;</span> = <span class="kw3">shift</span>;
+    <span class="nu0">1</span> <span class="kw1">while</span> <span class="kw3">s</span>/^<span class="br0">&#40;</span>-?\d+<span class="br0">&#41;</span><span class="br0">&#40;</span>\d<span class="br0">&#123;</span><span class="nu0">3</span><span class="br0">&#125;</span><span class="br0">&#41;</span>/$<span class="nu0">1</span>,$<span class="nu0">2</span>/;
+    <span class="kw3">return</span> <span class="re0">$_</span>;
+<span class="br0">&#125;</span> 
+&#160;
+<span class="co1">####################</span>
+<span class="co1">## END OF SCRIPT</span>
+<span class="co1">####################</span></pre></div>
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 4/1000000
+Post-expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key blog_wiki:pcache:idhash:25-0!*!0!*!*!*!* and timestamp 20120129091032 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				<div class="printfooter">
+				Retrieved from ‘<a href="http://blog.peacon.co.uk/w/index.php?title=Esx-health.pl_code&amp;oldid=474">http://blog.peacon.co.uk/w/index.php?title=Esx-health.pl_code&amp;oldid=474</a>’				</div>
+				<!-- /printfooter -->
+												<!-- catlinks -->
+				<div id='catlinks' class='catlinks catlinks-allhidden'></div>				<!-- /catlinks -->
+												<div class="visualClear"></div>
+				<!-- debughtml -->
+								<!-- /debughtml -->
+			</div>
+			<!-- /bodyContent -->
+		</div>
+		<!-- /content -->
+		<!-- header -->
+		<div id="mw-head" class="noprint">
+			
+<!-- 0 -->
+<div id="p-personal" class="">
+	<h5>Personal tools</h5>
+	<ul>
+		<li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Esx-health.pl_code" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>
+	</ul>
+</div>
+
+<!-- /0 -->
+			<div id="left-navigation">
+				
+<!-- 0 -->
+<div id="p-namespaces" class="vectorTabs">
+	<h5>Namespaces</h5>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="/wiki/Esx-health.pl_code"  title="View the content page [c]" accesskey="c">Page</a></span></li>
+					<li  id="ca-talk" class="new"><span><a href="/w/index.php?title=Talk:Esx-health.pl_code&amp;action=edit&amp;redlink=1"  title="Discussion about the content page [t]" accesskey="t">Discussion</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-variants" class="vectorMenu emptyPortlet">
+		<h5><span>Variants</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+			</div>
+			<div id="right-navigation">
+				
+<!-- 0 -->
+<div id="p-views" class="vectorTabs">
+	<h5>Views</h5>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="/wiki/Esx-health.pl_code" >Read</a></span></li>
+					<li id="ca-viewsource"><span><a href="/w/index.php?title=Esx-health.pl_code&amp;action=edit"  title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="/w/index.php?title=Esx-health.pl_code&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-cactions" class="vectorMenu emptyPortlet">
+	<h5><span>Actions</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+
+<!-- 2 -->
+<div id="p-search">
+	<h5><label for="searchInput">Search</label></h5>
+	<form action="/w/index.php" id="searchform">
+		<input type='hidden' name="title" value="Special:Search"/>
+				<input type="search" name="search" title="Search blog.peacon.co.uk [f]" accesskey="f" id="searchInput" />		<input type="submit" name="go" value="Go" title="Go to a page with this exact name if exists" id="searchGoButton" class="searchButton" />		<input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton" />			</form>
+</div>
+
+<!-- /2 -->
+			</div>
+		</div>
+		<!-- /header -->
+		<!-- panel -->
+			<div id="mw-panel" class="noprint">
+				<!-- logo -->
+					<div id="p-logo"><a style="background-image: url(/w/wiki-logo.png);" href="/wiki/Main_Page"  title="Visit the main page"></a></div>
+				<!-- /logo -->
+				
+<!-- navigation -->
+<div class="portal" id='p-navigation'>
+	<h5>Navigation</h5>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+			<li id="n-portal"><a href="/wiki/Blog.peacon.co.uk:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li>
+			<li id="n-currentevents"><a href="/wiki/Blog.peacon.co.uk:Current_events" title="Find background information on current events">Current events</a></li>
+			<li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+			<li id="n-randompage"><a href="/wiki/Special:Random" title="Load a random page [x]" accesskey="x">Random page</a></li>
+			<li id="n-help"><a href="/wiki/Help:Contents" title="The place to find out">Help</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /navigation -->
+
+<!-- SEARCH -->
+
+<!-- /SEARCH -->
+
+<!-- TOOLBOX -->
+<div class="portal" id='p-tb'>
+	<h5>Toolbox</h5>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Esx-health.pl_code" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Esx-health.pl_code" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+			<li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li><a href="/w/index.php?title=Esx-health.pl_code&amp;printable=yes" rel="alternate">Printable version</a></li>
+			<li id="t-permalink"><a href="/w/index.php?title=Esx-health.pl_code&amp;oldid=474" title="Permanent link to this revision of the page">Permanent link</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /TOOLBOX -->
+
+<!-- LANGUAGES -->
+
+<!-- /LANGUAGES -->
+			</div>
+		<!-- /panel -->
+		<!-- footer -->
+		<div id="footer">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 29 November 2011, at 16:15.</li>
+											<li id="footer-info-viewcount">This page has been accessed 480 times.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="/wiki/Blog.peacon.co.uk:Privacy_policy" title="Blog.peacon.co.uk:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="/wiki/Blog.peacon.co.uk:About" title="Blog.peacon.co.uk:About">About blog.peacon.co.uk</a></li>
+											<li id="footer-places-disclaimer"><a href="/wiki/Blog.peacon.co.uk:General_disclaimer" title="Blog.peacon.co.uk:General disclaimer">Disclaimers</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="/w/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<!-- /footer -->
+		<!-- fixalpha -->
+		<script type="text/javascript"> if ( window.isMSIE55 ) fixalpha(); </script>
+		<!-- /fixalpha -->
+		<script src="/w/load.php?debug=false&amp;lang=en-gb&amp;modules=skins.vector&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+	mw.loader.load(["mediawiki.user", "mediawiki.util", "mediawiki.page.ready", "mediawiki.legacy.wikibits", "mediawiki.legacy.ajax", "ext.vector.collapsibleNav", "ext.vector.collapsibleTabs", "ext.vector.simpleSearch"]);
+}
+</script>
+<script>if(window.mw){
+	mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,
+	"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"vector-simplesearch":1,"variant":"en-gb","language":"en-gb","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false});;mw.user.tokens.set({"editToken":"+\\","watchToken":false});;mw.loader.state({"user.options":"ready","user.tokens":"ready"});
+	
+	/* cache key: blog_wiki:resourceloader:filter:minify-js:4:1ff8fd8533fa2dfa96c820e011987779 */
+}
+</script><!-- Served in 0.209 secs. -->
+	</body>
+</html>

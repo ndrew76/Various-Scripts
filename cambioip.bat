@@ -1,0 +1,1 @@
+netsh interface ip set address name="Connessione alla rete locale" static 192.168.0.20 255.255.255.0 192.168.0.253 1

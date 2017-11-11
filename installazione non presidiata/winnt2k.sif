@@ -1,0 +1,33 @@
+;SetupMgrTag
+[Data]
+    AutoPartition=1
+    MsDosInitiated="0"
+    UnattendedInstall="Yes"
+
+[Unattended]
+    UnattendMode=FullUnattended
+    OemSkipEula=Yes
+    OemPreinstall=No
+    TargetPath=\WINNT
+
+[GuiUnattended]
+    AdminPassword=*
+    OEMSkipRegional=1
+    TimeZone=110
+    OemSkipWelcome=1
+
+[UserData]
+    FullName="yuppies services"
+    OrgName="yuppies services"
+    ComputerName=pc
+
+[TapiLocation]
+    CountryCode=39
+    AreaCode=059
+
+[Identification]
+    JoinWorkgroup=WORKGROUP
+
+[Networking]
+    InstallDefaultComponents=Yes
+

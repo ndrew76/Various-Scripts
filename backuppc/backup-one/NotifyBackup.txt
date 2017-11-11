@@ -1,0 +1,91 @@
+#!/usr/bin/perl
+
+#################
+#
+# BackupNotify              : send mail after a good or a bad backup
+# BackupNotify_succes : send email only after a good backup
+# BackupNotify_echec  : send email only after a bad backup
+#
+# jmb 20/06/2006
+# jmb 10/10/2007
+#
+# parameters : $user $xferOK $host $type $client $hostIP
+#
+use Socket;
+
+$mailprog = '/usr/sbin/sendmail';
+
+$user = $ARGV[0];
+$xferOK = $ARGV[1];
+$host = $ARGV[2];
+$type = $ARGV[3];
+$client = $ARGV[4];
+$hostIP = $ARGV[5];
+
+#$recipient = $user;
+$recipient = "tecnici\@netkom.net";
+#$ccrecipient = "email\@dominiocliente";
+
+$script = $0;
+$succes = 1;
+$echec = 1;
+
+if ($script  =~ 'succes'){ $echec = 0; }
+if ($script =~ 'echec'){ $succes = 0; }
+
+#
+# extract only errors from XferLOG
+#
+my $status=`/admin/analyse_backups $client`;
+($xferErr,$badFile,$TopDir,$xferlognum) = split(/-/,$status);
+chop($xferlognum);
+$xferErr = int($xferErr);
+$xferlognum = int($xferlognum);
+my $list_error=`/usr/share/BackupPC/bin/BackupPC_zcat
+/var/lib/BackupPC/pc/$client/XferLOG.$xferlognum.z | grep DENIED | grep -v 'System
+Volume Information' | grep -v RECYCLER |grep -v Watson`;
+
+#
+#
+$msg = "Rapporto di salvataggio dati del Server \"$client
+($hostIP)\" : \n\n";
+if ( $xferOK) {
+        if ( length($list_error) > 0) {
+                $msg .= "Le backup ($type) s'est PRESQUE bien deroule...\n\n";
+                $msg .= "Des erreurs de transfert se sont produites...\n\n";
+                $msg .= "Voici la liste des erreurs :\n";
+                $msg .= "$list_error\n";
+                $msg .= "Ceci peut se produire dans les situations suivantes :\n";
+                $msg .= "   - lorsqu'un fichier est en cours d'utilisation\n";
+                $msg .= "   - lorsqu'un dossier/fichier a des droits d'acces trop restrictifs\n\n";
+                $msg .= "De toute facon, les gestionnaires sont prevenus...\n";
+                #$ccrecipient = "[EMAIL PROTECTED]";
+                $subject = "Il Backup Completo di $client presenta errori !!!";
+                if ( $succes ){ &sendmail($msg); };
+        } else {
+                $msg .= "Il backup ($type) e' andato a buon fine\n";
+                #$ccrecipient = "";
+                $subject = "NOVATEC - BACKUP di $client: OK !";
+                if ( $succes ){ &sendmail($msg); };
+        }
+} else {
+        $msg .= "Il backup ($type) ha avuto un problema ! \n";
+        $subject = "BACKUPONE - Errore backup del server $client ...";
+        if ( $echec ) { &sendmail($msg); };
+}
+
+sub sendmail {
+   my($msg) = @_;
+   open(MAIL, "|$mailprog -t") && do {
+        print MAIL "To: $recipient\n";
+        print MAIL "From: backupone\@dominiocliente.it\n";
+        print MAIL "Cc: $ccrecipient\n";
+#        print MAIL "Bcc:\n";
+        print MAIL "Subject: $subject \n\n";
+        print MAIL "$msg\n";
+        print MAIL "\n BACKUPONE - Report delle operazioni accessibile dal sito <https://backupone/backuppc>\n";
+        print MAIL "\nPer supporto : helpdesk\@netkomgroup.it";
+        close (MAIL);
+   };
+
+}

@@ -1,0 +1,41 @@
+#!/bin/bash
+# script to send simple email
+# Email To ?
+EMAIL="your_email_address"
+# Email text/message
+EMAILMESSAGE="/tmp/emailmessage.txt"
+# Grab the status variables
+xferOK=$1
+host=$2
+type=$3
+client=$4
+hostIP=$5
+share=$6
+XferMethod=$7
+sshPath=$8
+cmdType=$9
+
+# Check if backup succeeded or not.
+if [[ $xferOK == 1 ]]; then
+        STATUS="SUCCESS"
+else
+        STATUS="FAILED"
+fi
+
+# email subject
+SUBJECT="[BackupPC] $STATUS for host: $client"
+
+# Email text/message
+echo "Filesystem backup for $host $STATUS" > $EMAILMESSAGE
+echo "" >>$EMAILMESSAGE
+echo "Type: $type" >>$EMAILMESSAGE
+echo "Client: $client" >>$EMAILMESSAGE
+echo "Host: $host" >>$EMAILMESSAGE
+echo "Host IP: $hostIP" >>$EMAILMESSAGE
+echo "Share: $share" >>$EMAILMESSAGE
+echo "XferMethod: $XferMethod" >>$EMAILMESSAGE
+echo "sshPath: $sshPath" >>$EMAILMESSAGE
+echo "cmdType: $cmdType" >>$EMAILMESSAGE
+
+# send an email using /bin/mail
+/bin/mail -s "$SUBJECT" "$EMAIL" < $EMAILMESSAGE
